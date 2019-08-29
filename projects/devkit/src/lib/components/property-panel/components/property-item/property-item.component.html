@@ -1,0 +1,60 @@
+<div class="farris-group-wrap property-item" [style.display]="show?'block':'none'">
+  <div class="form-group farris-form-group">
+    <label class="col-form-label" [popover]="popTemplate" [popoverTitle]="elementConfig.propertyName" container="body"
+      placement="left" triggers="mouseenter:mouseleave">
+      <span class="farris-label-text">{{elementConfig.propertyName}}</span>
+    </label>
+
+    <div class="farris-input-wrap" *ngIf="itemType=='string'">
+      <input type="input" class="form-control form-control-sm" [(ngModel)]="elementValue" (blur)="changeValue()"
+        *ngIf="!elementConfig.readonly">
+      <input type="input" class="form-control form-control-sm" [(ngModel)]="elementShowValue" [readonly]="'readonly'"
+        *ngIf="elementConfig.readonly">
+    </div>
+    <div class="farris-input-wrap" *ngIf="itemType=='number'">
+      <kendo-numerictextbox class="form-control form-control-sm" [(ngModel)]="elementValue"
+        [format]="numberRestriction.format" [min]="numberRestriction.min" [max]="numberRestriction.max"
+        [readonly]="elementConfig.readonly?true:false" [autoCorrect]="true" [decimals]="elementConfig.decimals"
+        (blur)="changeValue()">
+      </kendo-numerictextbox>
+    </div>
+    <div class="farris-input-wrap" *ngIf="itemType=='select'">
+      <kendo-dropdownlist class="form-control form-control-sm" [data]="selectOptions" textField="value" valueField="key"
+        [valuePrimitive]="true" [(ngModel)]="elementValue" (valueChange)="changeValue()"
+        [readonly]="elementConfig.readonly?true:false">
+      </kendo-dropdownlist>
+    </div>
+    <div class="farris-input-wrap" *ngIf="itemType=='date'">
+      <kendo-datepicker class="form-control form-control-sm" [(ngModel)]="elementValue"
+        [readonly]="elementConfig.readonly?true:false" [format]="'yyyy-MM-dd'" (valueChange)="changeValue()">
+      </kendo-datepicker>
+    </div>
+    <div class="farris-input-wrap" *ngIf="itemType=='datetime'">
+      <kendo-dateinput class="form-control form-control-sm" [(ngModel)]="elementValue"
+        [readonly]="elementConfig.readonly?true:false" [format]="elementConfig.format||'yyyy-MM-dd HH:mm:ss'"
+        (valueChange)="changeValue()"></kendo-dateinput>
+    </div>
+    <div class="farris-input-wrap modalIcon" *ngIf="itemType=='modal'" (mouseover)="onmouseover()"
+      (mouseleave)="onmouseleave()">
+      <input type="input" class="form-control form-control-sm" [(ngModel)]="elementShowValue" readonly>
+      <span *ngIf="showClearButton && !elementConfig.readonly" class=" " (click)="modalClear()">
+        <!-- <i class="f-icon modal_close"></i> -->
+        <i class="material-icons clearIcon">close</i>
+      </span>
+      <!-- <i class="fa fa-clone" (click)="openModal()"></i> -->
+      <i class="material-icons moreIcon" (click)="openModal()">filter_none</i>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #popTemplate>
+  <div *ngIf="elementConfig.propertyID">
+    <span>属性编号： </span> {{elementConfig.propertyID}}</div>
+  <div *ngIf="elementConfig.propertyName">
+    <span>属性名称： </span> {{elementConfig.propertyName}}</div>
+  <div *ngIf="elementConfig.description">
+    <span>描述： </span> {{elementConfig.description}}</div>
+  <div *ngIf="elementConfig.defaultValue">
+    <span>默认值： </span> {{elementConfig.defaultValue}}</div>
+</ng-template>

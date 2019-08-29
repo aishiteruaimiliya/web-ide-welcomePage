@@ -1,0 +1,28 @@
+<div #workbenchEl #workbench="autoHeight" class="workbench" autoHeight [position]="{top: -32, bottom: -22}">
+
+  <app-sidebar [bounds]="workbenchEl" [height]="workbench.containerHeight" [width]="400" (resizing)="leftResizing($event)" ></app-sidebar>
+
+
+  <div #designArea id="designArea" [style.height]="(workbench.containerHeight) + 'px'" class="workbench-center">
+    <div #main [style.height]="tabsContainerHeight + 'px'">
+      <app-tabs [actionsRef]="actions" [height] = " tabsContainerHeight - 35 ">
+          <ng-template #actions>
+            <ul class="actions-container" role="toolbar" aria-label="编辑器操作">
+                <li class="action-item" >
+                    <a class="action-label icon icon-full-screen" role="button" title="最大化" tabindex="0"></a>
+                </li>
+                <li class="action-item" >
+                    <a class="action-label icon icon-more" role="button" title="更多" tabindex="0"></a>
+                </li>
+            </ul>
+          </ng-template>
+      </app-tabs>
+    </div>
+
+    <app-terminal [bounds]="designArea" [top]="tabsContainerHeight" [height]="200" (resizing)="bottomResizing($event)" [width]="centerWidth"></app-terminal>
+  </div>
+
+  <!--<app-property-panel [bounds]="workbenchEl" [height]="workbench.containerHeight" [width]="300" (resizing)="rightResizing($event)"></app-property-panel>-->
+
+</div>
+

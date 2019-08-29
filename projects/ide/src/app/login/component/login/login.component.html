@@ -1,0 +1,61 @@
+<div class="auth-form-container">
+  <div class="row m-0">
+    <div class="col-12 col-md-6 p-0 d-flex login-log-container">
+      <div class="login-logo align-self-center position-relative">
+        <h1  [ngClass]='{"logo-en":languageType=="en"}'>{{languageText[languageType]["logoText"]}}</h1>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 p-0">
+      <section class=" login-section">
+          <form class="login-form" action="#" [formGroup]="myForm">  
+           <h2>{{languageText[languageType]["loginText"]}}</h2>
+              <div class="login-lg-area">
+                <span class="login-lg-text mr-2">Language / 语言</span>
+                <div class="btn-group login-lg-dropdown">
+                    <button type="button" class="btn p-0 m-0 bg-transparent dropdown-toggle" (click)='languageDropdown=true;'>
+                      <span class="login-lg" [ngClass]='{"lg-zh-cn":languageType=="zh-CHS","lg-en":languageType=="en"}'></span>
+                    </button>
+                    <div class="dropdown-menu p-1" [ngClass]='{"d-block":languageDropdown}' (mouseleave)='languageDropdown=false;'>
+                      <a class="dropdown-item border-bottom px-3" (click)='changeLanguage("zh-CHS")'>
+                          <span class="login-lg lg-zh-cn align-middle mr-2"></span>中文
+                      </a>
+                      <a class="dropdown-item px-3" (click)='changeLanguage("en")'>
+                          <span class="login-lg lg-en align-middle mr-2"></span>EngLish
+                      </a>
+                    </div>
+                  </div>
+              </div>
+              <select class="custom-select w-100" formControlName="Tenant" [(ngModel)] = 'curtTenantId'>
+                  <option *ngFor="let item of tenants" [value]="item.id">{{item.name}}</option>
+              </select> 
+              <input type="text" class="form-control" placeholder='{{languageText[languageType]["nameRemind"]}}' autocomplete="off" required   id="userName" name="userName" [formControl]="myForm.get('userName')" />
+              <input type="password" class="form-control" placeholder='{{languageText[languageType]["passwordRemind"]}}' autocomplete="off" required   id="passWord" name="passWord" [formControl]="myForm.get('passWord')" />       
+              <div class="clearfix">
+                  <div class="form-check float-left remember-info">
+                      <input class="form-check-input" type="checkbox" value="" id="rememberInfo">
+                      <label class="form-check-label p-0" for="rememberInfo">{{languageText[languageType]["rememberInfo"]}}</label>
+                    </div>
+                  <a class="float-right">{{languageText[languageType]["recoverPassword"]}}</a>
+              </div>
+              
+              <div class="form-actions">
+                <button type="submit" class="btn btn-login block w-100" (click)="handleLogin()">{{languageText[languageType]["loginBtn"]}}</button>              
+                <p class="text-center btn-regist">
+                    <a href="">{{languageText[languageType]["regist"]}}</a>
+                </p>
+                <label>------------------ {{languageText[languageType]["inspurId"]}}------------------</label>
+                <p class="text-center btn-regist">
+                  <a href="{{redirectUri}}">
+                    <img src="assets/img/InspurId.png" width="32" height="32">
+                  </a>
+                </p>
+                <div  *ngIf="errorMessage" class="alert alert-warning p-1  login-tips">
+                   {{languageText[languageType]["errorRemind"]}}
+                </div>
+                
+              </div>
+            </form>
+      </section>
+    </div>
+  </div>
+</div>

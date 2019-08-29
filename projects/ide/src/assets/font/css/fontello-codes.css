@@ -1,0 +1,17 @@
+
+.icon-undo:before { content: '\e800'; } /* '' */
+.icon-ok:before { content: '\e801'; } /* '' */
+.icon-search:before { content: '\e802'; } /* '' */
+.icon-ok-1:before { content: '\e803'; } /* '' */
+.icon-plus-1:before { content: '\e804'; } /* '' */
+.icon-plus:before { content: '\e805'; } /* '' */
+.icon-cw:before { content: '\e806'; } /* '' */
+.icon-ccw:before { content: '\e807'; } /* '' */
+.icon-ccw-1:before { content: '\e808'; } /* '' */
+.icon-arrows-ccw:before { content: '\e809'; } /* '' */
+.icon-github:before { content: '\e80a'; } /* '' */
+.icon-minus:before { content: '\e80b'; } /* '' */
+.icon-doc:before { content: '\e80c'; } /* '' */
+.icon-fork:before { content: '\f126'; } /* '' */
+.icon-ellipsis:before { content: '\f141'; } /* '' */
+.icon-ellipsis-vert:before { content: '\f142'; } /* '' */

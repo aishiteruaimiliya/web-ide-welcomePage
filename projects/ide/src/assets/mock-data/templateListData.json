@@ -1,0 +1,82 @@
+[
+    {
+        "templateID": "cardForm",
+        "templateName": "内置卡片界面模板",
+        "templatePic": "assets/icon/form-create-wizard/card.png",
+        "templateDescription": "创建一个卡片界面",
+        "category": "card",
+        "domJson": "assets/mock-data/form-template/card-template.json"
+    },
+    {
+        "templateID": "listForm",
+        "templateName": "内置列表界面",
+        "templatePic": "assets/icon/form-create-wizard/list.png",
+        "templateDescription": "创建一个列表界面",
+        "category": "list",
+        "domJson": "assets/mock-data/form-template/list-template.json"
+    },
+    {
+        "templateID": "listCardForm",
+        "templateName": "内置字典界面模板",
+        "templatePic": "assets/icon/form-create-wizard/list-card.png",
+        "templateDescription": "创建一个左列表右卡片的界面",
+        "category": "dictionary",
+        "domJson": "assets/mock-data/form-template/list-card-template.json"
+    },
+    {
+        "templateID": "treeDictionaryForm",
+        "templateName": "内置树字典界面模板",
+        "templatePic": "assets/icon/form-create-wizard/tree-card.png",
+        "templateDescription": "创建一个左树右卡片的界面",
+        "category": "dictionary",
+        "domJson": "assets/mock-data/form-template/tree-card-template.json"
+    },
+    {
+        "templateID": "doubleListForm",
+        "templateName": "双列表界面模板",
+        "templatePic": "assets/icon/form-create-wizard/double-list.png",
+        "templateDescription": "创建一个左右均为列表的界面",
+        "category": "dictionary",
+        "domJson": "assets/mock-data/form-template/double-list-template.json"
+    },
+    {
+        "templateID": "listManageForm",
+        "templateName": "批量编辑列表界面模板",
+        "templatePic": "assets/icon/form-create-wizard/list.png",
+        "templateDescription": "创建一个批量编辑列表界面",
+        "category": "list",
+        "domJson": "assets/mock-data/form-template/list-manage-template.json"
+    },
+    {
+        "templateID": "treeListForm",
+        "templateName": "左树右列表界面模板",
+        "templatePic": "assets/icon/form-create-wizard/tree-list.png",
+        "templateDescription": "创建一个左树表、右列表的界面",
+        "category": "dictionary",
+        "domJson": "assets/mock-data/form-template/tree-list-template.json"
+    },
+    {
+        "templateID": "listDictionaryForm",
+        "templateName": "多数据源列卡界面模板",
+        "templatePic": "assets/icon/form-create-wizard/list-dic.png",
+        "templateDescription": "创建一个左列表、右主从卡片的界面",
+        "category": "dictionary",
+        "domJson": "assets/mock-data/form-template/list-dic-template.json"
+    },
+    {
+        "templateID": "qdpIndexForm",
+        "templateName": "查询索引页模版",
+        "templatePic": "assets/icon/form-create-wizard/qdp-index.png",
+        "templateDescription": "创建一个卡片界面",
+        "category": "card",
+        "domJson": "assets/mock-data/form-template/qdp-index-template.json"
+    },
+    {
+        "templateID": "listComponent",
+        "templateName": "列表组件",
+        "templatePic": "assets/icon/form-create-wizard/list.png",
+        "templateDescription": "创建列表组件",
+        "category": "dictionary",
+        "domJson": "assets/mock-data/component-template/list-cmp.json"
+    }
+]

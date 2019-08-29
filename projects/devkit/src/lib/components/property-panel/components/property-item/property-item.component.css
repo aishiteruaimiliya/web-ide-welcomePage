@@ -1,0 +1,33 @@
+.property-item .form-group {
+    margin-bottom: 2px;
+}
+
+.property-item .modalIcon input {
+    padding-right: 30px;
+}
+
+.property-item .modalIcon .moreIcon {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #758a96;
+}
+
+.property-item .modalIcon .clearIcon {
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 19px;
+    color: #758a96;
+}
+
+.property-item .form-control[readonly] {
+    background-color: #fff;
+}
+
+.property-item .form-control:disabled, .property-item .form-control[readonly] {
+    color: #4B4C4C;
+}

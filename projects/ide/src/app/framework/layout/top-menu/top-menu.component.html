@@ -1,0 +1,35 @@
+<nav class="navbar navbar-light" style=" padding-top: 0;padding-bottom: 0; padding-left: 5px; background-color: #2B2E33;justify-content: flex-start;">
+  <!-- <a class="navbar-brand logo"> </a> -->
+
+  <div class="left-menu">
+    <!--<ul class="menus" style="display: inline-block">-->
+    <!--<li class="nav-item">-->
+    <!--<a class="nav-link" href="#">文件</a>-->
+    <!--</li>-->
+    <!--<li class="nav-item">-->
+    <!--<a class="nav-link" href="#">编辑</a>-->
+    <!--</li>-->
+
+    <!--</ul>-->
+    <!--<app-plugin-container [componentRef]="navbarContent"></app-plugin-container>-->
+    <app-navbar [menuConfig]="menuConfig"></app-navbar>
+  </div>
+
+  <ul class="nav justify-content-end" style="flex:1">
+    <!-- <li class="nav-item">
+      <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li> -->
+    <!-- <li class="nav-item">
+      <a class="nav-link userinfo">
+         <img class="rounded-circle" alt="头像" style="width: 40px; height: 40px;" src="assets/imgs/8.jpg">
+        <span style="margin-left: 5px;">Lucas Huang</span>
+      </a>
+    </li> -->
+  </ul>
+</nav>

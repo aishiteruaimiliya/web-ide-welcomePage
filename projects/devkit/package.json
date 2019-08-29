@@ -1,0 +1,14 @@
+{
+  "name": "@farris/ide-devkit",
+  "version": "1.0.6",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0",
+    "@farris/ui-dialog": "^0.0.1",
+    "@farris/ui-draggable": "^0.0.1",
+    "@farris/ui-modal": "^0.0.1",
+    "@farris/ui-notify": "^0.0.1",
+    "@farris/ui-panel": "^0.0.1",
+    "@farris/ui-perfect-scrollbar": "^0.0.1"
+  }
+}

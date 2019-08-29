@@ -1,0 +1,39 @@
+<div #east [style.display]="isOpen?'block':'none'">
+    <div class="propertyPanel panel d-flex flex-column">
+
+        <div class="title">
+            <div class="title-label">
+                <span title="属性">属性面板</span>
+            </div>
+            <div class="title-actions">
+                <div class="monaco-toolbar">
+                    <div class="monaco-action-bar animated">
+                        <ul class="actions-container" role="toolbar" aria-label="属性面板">
+                            <li class="action-item" (click)="collapse()" *ngIf="showCloseBtn">
+                                <a class="hide-panel" title="关闭"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div #propertyPanel class="panel-body" [style.height]="(height - 35) + 'px'">
+            <perfect-scrollbar [config]="{suppressScrollX: true}">
+                <ul class="property-grid">
+                    <li *ngFor="let category of propertyConfig">
+                        <ng-container *ngIf="!category.hide">
+                            <span *ngIf="!category.hideTitle" [class]="category.status === 'closed' ? 'group-label collapse': 'group-label expand' "
+                                (click)="changeStatus(category)">{{ category.categoryName }}</span>
+                            <div [style.display]="!category.status || category.status === 'open'?'block':'none'" class="py-1 ">
+                                <webide-property-item-list [category]="category" [propertyData]="propertyData"
+                                    (valueChanged)="_valueChanged($event)" (submitModal)="_submitModal($event)"></webide-property-item-list>
+                            </div>
+                        </ng-container>
+                    </li>
+                </ul>
+            </perfect-scrollbar>
+
+        </div>
+    </div>
+</div>

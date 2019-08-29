@@ -1,0 +1,280 @@
+<router-outlet></router-outlet>
+
+
+<iframe src="./plugins/command-service/index.html" style="height:0;width:0"></iframe>
+
+<!-- <app-selectbusinessobject></app-selectbusinessobject>
+
+<nav class="navbar navbar-expand-sm py-0">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;">
+    <ul class="web-ide-menu-bar navbar-nav mr-auto">
+      <li class="nav-item dropdown" dropdown> 
+        <a dropdownToggle class="nav-link" href="#">文件</a>
+        <div *dropdownMenu class="dropdown-menu">
+          <a class="dropdown-item" href="#">新建文件</a>
+          <a class="dropdown-item" href="#">新建窗口</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">打开文件</a>
+          <a class="dropdown-item" href="#">打开文件夹</a>
+          <a class="dropdown-item" href="#">打开工作区</a>
+          <a class="dropdown-item" href="#">打开最近的文件</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">将文件添加到工作区</a>
+          <a class="dropdown-item" href="#">将工作区另存为</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">保存</a>
+          <a class="dropdown-item" href="#">另存为</a>
+          <a class="dropdown-item" href="#">全部保存</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">自动保存</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">首选项</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">还原文件</a>
+          <a class="dropdown-item" href="#">关闭编辑器</a>
+          <a class="dropdown-item" href="#">关闭文件夹</a>
+          <a class="dropdown-item" href="#">关闭窗口</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">退出</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle class="nav-link" href="#">编辑</a>
+        <div *dropdownMenu class="dropdown-menu">
+          <a class="dropdown-item" href="#">撤销</a>
+          <a class="dropdown-item" href="#">恢复</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">剪切</a>
+          <a class="dropdown-item" href="#">复制</a>
+          <a class="dropdown-item" href="#">粘贴</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">查找</a>
+          <a class="dropdown-item" href="#">替换</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">在文件中查找</a>
+          <a class="dropdown-item" href="#">在文件中替换</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">切换行注释</a>
+          <a class="dropdown-item" href="#">切换块注释</a>
+          <a class="dropdown-item" href="#">Emmet展开缩写</a>
+          <a class="dropdown-item" href="#">Emmet...</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle class="nav-link" href="#">选择</a>
+        <div *dropdownMenu class="dropdown-menu">
+          <a class="dropdown-item" href="#">全选</a>
+          <a class="dropdown-item" href="#">展开选定的内容</a>
+          <a class="dropdown-item" href="#">缩小选定的范围</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">向上复制一行</a>
+          <a class="dropdown-item" href="#">向下复制一行</a>
+          <a class="dropdown-item" href="#">向上移动一行</a>
+          <a class="dropdown-item" href="#">向下移动一行</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">切换为"Ctrl+单击"进行多光标功能</a>
+          <a class="dropdown-item" href="#">在上面添加光标</a>
+          <a class="dropdown-item" href="#">在下面添加光标</a>
+          <a class="dropdown-item" href="#">在行尾添加光标</a>
+          <a class="dropdown-item" href="#">添加下一个匹配项</a>
+          <a class="dropdown-item" href="#">添加上一个匹配项</a>
+          <a class="dropdown-item" href="#">选择所有匹配项</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle class="nav-link" href="#">查看</a>
+        <div *dropdownMenu class="dropdown-menu">
+          <a class="dropdown-item" href="#">命令面板...</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">资源管理器</a>
+          <a class="dropdown-item" href="#">搜索</a>
+          <a class="dropdown-item" href="#">源代码管理器</a>
+          <a class="dropdown-item" href="#">调试</a>
+          <a class="dropdown-item" href="#">扩展</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">输出</a>
+          <a class="dropdown-item" href="#">问题</a>
+          <a class="dropdown-item" href="#">调试控制台</a>
+          <a class="dropdown-item" href="#">集成终端</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">切换全屏</a>
+          <a class="dropdown-item" href="#">切换Zen模式</a>
+          <a class="dropdown-item" href="#">切换菜单栏</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">拆分编辑器</a>
+          <a class="dropdown-item" href="#">切换编辑器组布局</a>
+          <a class="dropdown-item" href="#">向右移动侧边栏</a>
+          <a class="dropdown-item" href="#">切换侧边栏</a>
+          <a class="dropdown-item" href="#">切换面板</a>
+          <a class="dropdown-item" href="#">隐藏状态栏</a>
+          <a class="dropdown-item" href="#">隐藏活动栏</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">切换自动换行</a>
+          <a class="dropdown-item" href="#">切换小地图</a>
+          <a class="dropdown-item" href="#">切换呈现空格</a>
+          <a class="dropdown-item" href="#">切换控制字符</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">放大</a>
+          <a class="dropdown-item" href="#">缩小</a>
+          <a class="dropdown-item" href="#">重置缩放</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle class="nav-link" href="#">转到</a>
+        <div *dropdownMenu class="dropdown-menu">
+          <a class="dropdown-item" href="#">后退</a>
+          <a class="dropdown-item" href="#">前进</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">切换编辑器</a>
+          <a class="dropdown-item" href="#">切换组</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">转到文件</a>
+          <a class="dropdown-item" href="#">转到文件中的符号</a>
+          <a class="dropdown-item" href="#">转到工作区中的符号</a>
+          <a class="dropdown-item" href="#">转到定义</a>
+          <a class="dropdown-item" href="#">转到类型定义</a>
+          <a class="dropdown-item" href="#">转到实现</a>
+          <a class="dropdown-item" href="#">转到行...</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle class="nav-link" href="#">调试</a>
+        <div *dropdownMenu class="dropdown-menu">
+          <a class="dropdown-item" href="#">启动调试</a>
+          <a class="dropdown-item" href="#">非调试启动</a>
+          <a class="dropdown-item" href="#">停止调试</a>
+          <a class="dropdown-item" href="#">重启调试</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">打开配置</a>
+          <a class="dropdown-item" href="#">添加配置</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">单步跳过</a>
+          <a class="dropdown-item" href="#">单步执行</a>
+          <a class="dropdown-item" href="#">单步跳出</a>
+          <a class="dropdown-item" href="#">继续</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">切换断点</a>
+          <a class="dropdown-item" href="#">新建断点</a>
+          <a class="dropdown-item" href="#">启用所有断点</a>
+          <a class="dropdown-item" href="#">禁用所有断点</a>
+          <a class="dropdown-item" href="#">删除所有断点</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">安装其他调试器</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle class="nav-link" href="#">任务</a>
+        <div *dropdownMenu class="dropdown-menu">
+          <a class="dropdown-item" href="#">运行任务</a>
+          <a class="dropdown-item" href="#">运行生成任务</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">中止任务</a>
+          <a class="dropdown-item" href="#">重启正在运行的任务</a>
+          <a class="dropdown-item" href="#">显示正在运行的任务</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">配置任务</a>
+          <a class="dropdown-item" href="#">配置默认生成任务</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle class="nav-link" href="#">帮助</a>
+        <div *dropdownMenu class="dropdown-menu">
+          <a class="dropdown-item" href="#">欢迎使用</a>
+          <a class="dropdown-item" href="#">交互式演练场</a>
+          <a class="dropdown-item" href="#">文档</a>
+          <a class="dropdown-item" href="#">发行说明</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">快捷键参考</a>
+          <a class="dropdown-item" href="#">介绍性视频</a>
+          <a class="dropdown-item" href="#">演示与技巧</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">在Twitter上加入我们</a>
+          <a class="dropdown-item" href="#">搜索功能请求</a>
+          <a class="dropdown-item" href="#">使用英文报告问题</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">查看许可证</a>
+          <a class="dropdown-item" href="#">隐私声明</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">切换开发人员工具</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">检查更新</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">关于</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="d-flex" style="height: calc(100vh - 30px);">
+  <div class="left-panel-container d-flex" [style.width.px]="leftPanelWidth">
+    <ngb-navtabset type="pills" [orientation]="currentOrientation" (tabChange)="onTabChanged($event)">
+      <ngb-navtab>
+        <ng-template ngbNavTabTitle>
+          <i class="material-icons">content_copy</i>
+        </ng-template>
+        <ng-template ngbNavTabContent>
+          <button class="btn" (click)="addEditorTab()">addEditorTab</button>
+          <button class="btn" (click)="addDesignerTab()">addDesignerTab</button>
+          <button class="btn" (click)="closeLast()">closeLast</button>
+        </ng-template>
+      </ngb-navtab>
+      <ngb-navtab>
+        <ng-template ngbNavTabTitle>
+          <i class="material-icons">search</i>
+        </ng-template>
+        <ng-template ngbNavTabContent>
+        </ng-template>
+      </ngb-navtab>
+      <ngb-navtab>
+        <ng-template ngbNavTabTitle>
+          <i class="fa fa-code-fork"></i>
+        </ng-template>
+        <ng-template ngbNavTabContent>
+        </ng-template>
+      </ngb-navtab>
+    </ngb-navtabset>
+    <div sash class="web-ide-sash-vertical" [(panelWidth)]="leftPanelWidth" (widthChanged)="onLeftPanelWidthChanged($event)"></div>
+  </div>
+  <div class="main d-flex">
+    <!- <ngb-tabset>
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          Hello World
+        </ng-template>
+        <ng-template ngbTabContent>
+          <ngx-monaco-editor [options]="editorOptions" [(ngModel)]="code"></ngx-monaco-editor>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          Hello World
+        </ng-template>
+        <ng-template ngbTabContent>
+          <app-idecontent></app-idecontent>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle>
+          Hello World
+        </ng-template>
+        <ng-template ngbTabContent>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset> ->
+    <ngb-tabset>
+      <ngb-tab *ngFor="let tab of tabs">
+        <ng-template ngbTabTitle>
+          {{tab.title}}
+        </ng-template>
+        <ng-template ngbTabContent>
+          <app-idecontentwrapper [contentUri]="tab.uri"></app-idecontentwrapper>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+  <!- <div class="right-panel-container"></div> ->
+</div> -->

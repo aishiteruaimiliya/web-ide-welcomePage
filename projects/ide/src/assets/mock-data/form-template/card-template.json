@@ -1,0 +1,493 @@
+{
+    "module": {
+        "id": "card-template",
+        "code": "card-template",
+        "name": "卡片模板",
+        "caption": "",
+        "type": "Module",
+        "creator": "wang-xh",
+        "creationDate": "2018-08-30 10:56:00",
+        "updateVersion": "190123",
+        "showTitle": true,
+        "bootstrap": "card-template",
+        "schemas": [],
+        "states": [],
+        "contents": [],
+        "stateMachines": [],
+        "viewmodels": [
+            {
+                "id": "root-viewmodel",
+                "code": "root-viewmodel",
+                "name": "root-viewmodel",
+                "fields": [],
+                "stateMachine": "sales_order_state_machine",
+                "serviceRefs": [],
+                "commands": [
+                    {
+                        "id": "e05264fb-796d-43fb-b83b-9e2f3866c328",
+                        "code": "Load1",
+                        "name": "加载",
+                        "params": [
+                            {
+                                "name": "action",
+                                "shownName": "初始动作",
+                                "value": "{UISTATE~/root-component/action}",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "Load",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    },
+                    {
+                        "id": "246a275c-88c9-4c8a-aa82-be6a950a4325",
+                        "code": "LoadAndAdd1",
+                        "name": "加载并新增",
+                        "params": [
+                            {
+                                "name": "transitionAction",
+                                "shownName": "状态迁移动作",
+                                "value": "Create",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "LoadAndAdd",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    },
+                    {
+                        "id": "70acc053-fa15-45be-851c-cf694e1bcaf7",
+                        "code": "LoadAndView1",
+                        "name": "加载并查看",
+                        "params": [
+                            {
+                                "name": "id",
+                                "shownName": "数据id",
+                                "value": "{UISTATE~/root-component/id}",
+                                "description": null
+                            },
+                            {
+                                "name": "transitionAction",
+                                "shownName": "状态迁移动作",
+                                "value": "Cancel",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "LoadAndView",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    },
+                    {
+                        "id": "3e72ee6f-8f7b-4f29-aa0e-5887f2861117",
+                        "code": "LoadAndEdit1",
+                        "name": "加载并编辑",
+                        "params": [
+                            {
+                                "name": "id",
+                                "shownName": "数据id",
+                                "value": "{UISTATE~/root-component/id}",
+                                "description": null
+                            },
+                            {
+                                "name": "transitionAction",
+                                "shownName": "状态迁移动作",
+                                "value": "Edit",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "LoadAndEdit",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    },
+                    {
+                        "id": "f90aadfa-988c-4da5-a5db-1416c3333794",
+                        "code": "Add1",
+                        "name": "新增数据",
+                        "params": [
+                            {
+                                "name": "transitionAction",
+                                "shownName": "状态迁移动作",
+                                "value": "Create",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "Add",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    },
+                    {
+                        "id": "a323e27b-b9c6-4848-93b9-f117403a94ff",
+                        "code": "Edit1",
+                        "name": "编辑数据",
+                        "params": [
+                            {
+                                "name": "transitionAction",
+                                "shownName": "状态迁移动作",
+                                "value": "Edit",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "Edit",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    },
+                    {
+                        "id": "31b814db-01e4-407d-8fad-0f08dbb01999",
+                        "code": "Save1",
+                        "name": "保存数据",
+                        "params": [
+                            {
+                                "name": "transitionAction",
+                                "shownName": "状态迁移动作",
+                                "value": "Cancel",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "Save",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    },
+                    {
+                        "id": "4f5ed2ec-8def-4a3c-8e7b-397ea93010e8",
+                        "code": "Cancel1",
+                        "name": "取消变更",
+                        "params": [
+                            {
+                                "name": "transitionAction",
+                                "shownName": "状态迁移动作",
+                                "value": "Cancel",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "Cancel",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    },
+                    {
+                        "id": "f8f2dbef-56a3-4514-a3c4-c275d5ecf421",
+                        "code": "Close1",
+                        "name": "关闭",
+                        "params": [
+                            {
+                                "name": "url",
+                                "shownName": "上级Url",
+                                "value": "",
+                                "description": null
+                            },
+                            {
+                                "name": "params",
+                                "shownName": "路由参数",
+                                "value": "",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "Close",
+                        "cmpId": "8172a979-2c80-4637-ace7-b13074d3f393",
+                        "extensions": []
+                    }
+                ],
+                "states": [],
+                "bindTo": "/"
+            },
+            {
+                "id": "basic-form-viewmodel",
+                "code": "basic-form-viewmodel",
+                "name": "basic-form-viewmodel",
+                "fields": [],
+                "serviceRefs": [],
+                "commands": [],
+                "states": [],
+                "bindTo": "/",
+                "parent": "root-viewmodel"
+            }
+        ],
+        "components": [
+            {
+                "id": "root-component",
+                "type": "Component",
+                "viewModel": "root-viewmodel",
+                "componentType": "Frame",
+                "onInit": "Load1",
+                "contents": [
+                    {
+                        "id": "root-layout",
+                        "type": "ContentContainer",
+                        "appearance": {
+                            "class": "farris-main-area flex-column"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [
+                            {
+                                "id": "page-header",
+                                "type": "ContentContainer",
+                                "appearance": {
+                                    "class": "farris-header"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "title": null,
+                                "contents": [
+                                    {
+                                        "id": "header-nav",
+                                        "type": "ContentContainer",
+                                        "appearance": {
+                                            "class": "navbar p-0"
+                                        },
+                                        "border": null,
+                                        "font": null,
+                                        "margin": null,
+                                        "padding": null,
+                                        "size": null,
+                                        "title": null,
+                                        "contents": [
+                                            {
+                                                "id": "page-header-title",
+                                                "type": "DisplayField",
+                                                "appearance": {
+                                                    "class": "farris-form-title mr-auto"
+                                                },
+                                                "border": null,
+                                                "font": null,
+                                                "margin": null,
+                                                "padding": null,
+                                                "size": null,
+                                                "title": "",
+                                                "binding": null,
+                                                "displayTemplate": ""
+                                            },
+                                            {
+                                                "id": "page-header-toolbar",
+                                                "type": "ButtonGroup",
+                                                "appearance": {
+                                                    "class": "btn-toolbar btn-group-lg"
+                                                },
+                                                "border": null,
+                                                "font": null,
+                                                "margin": null,
+                                                "padding": null,
+                                                "size": null,
+                                                "contents": [
+                                                    {
+                                                        "id": "button-add",
+                                                        "type": "Button",
+                                                        "text": "新增",
+                                                        "appearance": {
+                                                            "class": "btn btn-primary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "disable": "!viewModel.stateMachine['canAdd']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "textAligment": "center",
+                                                        "click": "Add1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-edit",
+                                                        "type": "Button",
+                                                        "text": "编辑",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": "!viewModel.stateMachine['canEdit']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "textAligment": "center",
+                                                        "click": "Edit1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-cancel",
+                                                        "type": "Button",
+                                                        "text": "取消",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": "!viewModel.stateMachine['canCancel']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "textAligment": "center",
+                                                        "click": "Cancel1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-save",
+                                                        "type": "Button",
+                                                        "text": "保存",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": "!viewModel.stateMachine['canSave']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "textAligment": "center",
+                                                        "click": "Save1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-close",
+                                                        "type": "Button",
+                                                        "text": "关闭",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": false,
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "textAligment": "center",
+                                                        "click": "Close1",
+                                                        "template": null
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "main-container",
+                                "type": "ContentContainer",
+                                "appearance": {
+                                    "class": "flex-fill farris-split-section  m-2 farris-overflow-y-auto"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "contents": [
+                                    {
+                                        "id": "card-container",
+                                        "type": "ContentContainer",
+                                        "appearance": {
+                                            "class": "farris-form farris-card-content-bg farris-card-section "
+                                        },
+                                        "border": null,
+                                        "font": null,
+                                        "margin": null,
+                                        "padding": null,
+                                        "size": null,
+                                        "contents": [
+                                            {
+                                                "id": "basic-form-component-ref",
+                                                "type": "ComponentRef",
+                                                "component": "basic-form-component"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "basic-form-component",
+                "type": "Component",
+                "viewModel": "basic-form-viewmodel",
+                "componentType": "form-col-4",
+                "appearance": {
+                    "class": "d-flex flex-wrap"
+                },
+                "onInit": "",
+                "contents": [
+                    {
+                        "id": "basic-form-layout",
+                        "type": "Form",
+                        "appearance": {
+                            "class": "d-flex flex-wrap col-12 px-0"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [],
+                        "controlsInline": false
+                    }
+                ]
+            }
+        ],
+        "webcmds": [
+            {
+                "id": "8172a979-2c80-4637-ace7-b13074d3f393",
+                "path": "/projects/packages/'Inspur.GS.Gsp.Web.WebCmp/webcmd",
+                "name": "CardController.webcmd",
+                "refedHandlers": [
+                    {
+                        "host": "e05264fb-796d-43fb-b83b-9e2f3866c328",
+                        "handler": "Load"
+                    },
+                    {
+                        "host": "246a275c-88c9-4c8a-aa82-be6a950a4325",
+                        "handler": "LoadAndAdd"
+                    },
+                    {
+                        "host": "70acc053-fa15-45be-851c-cf694e1bcaf7",
+                        "handler": "LoadAndView"
+                    },
+                    {
+                        "host": "3e72ee6f-8f7b-4f29-aa0e-5887f2861117",
+                        "handler": "LoadAndEdit"
+                    },
+                    {
+                        "host": "f90aadfa-988c-4da5-a5db-1416c3333794",
+                        "handler": "Add"
+                    },
+                    {
+                        "host": "a323e27b-b9c6-4848-93b9-f117403a94ff",
+                        "handler": "Edit"
+                    },
+                    {
+                        "host": "31b814db-01e4-407d-8fad-0f08dbb01999",
+                        "handler": "Save"
+                    },
+                    {
+                        "host": "4f5ed2ec-8def-4a3c-8e7b-397ea93010e8",
+                        "handler": "Cancel"
+                    },
+                    {
+                        "host": "f8f2dbef-56a3-4514-a3c4-c275d5ecf421",
+                        "handler": "Close"
+                    }
+                ]
+            }
+        ],
+        "serviceRefs": []
+    }
+}

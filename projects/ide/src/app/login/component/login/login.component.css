@@ -1,0 +1,40 @@
+.login-logo-name {
+    /* color: #e6e6e6; */
+    font-size: 140px;
+    font-weight: 800;
+    letter-spacing: -10px;
+}
+.middle-box  {
+    width: 300px;
+    max-width: 400px;
+    z-index: 100;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.more-sign h6 {
+    position: relative;
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #b5b5b5;
+    text-align: center;
+    line-height: 24px;
+}
+
+.more-sign h6:before {
+    left: 30px
+}
+
+.more-sign h6:after,.more-sign h6:before {
+    content: "";
+    border-top: 1px solid #b5b5b5;
+    display: block;
+    position: absolute;
+    width: 80px;
+    top: 10px;
+}
+.auth-login-area{
+  border:1px solid #ddd;
+}
+
+

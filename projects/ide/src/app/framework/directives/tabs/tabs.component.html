@@ -1,0 +1,43 @@
+<div tabScroll  class="workbench-tabs">
+    
+    <div #tabLabelBox style="flex:1;position: static; overflow: hidden;">
+        <perfect-scrollbar [config]="{suppressScrollY: true}">
+            <ul  #tablist class="nav" [ngClass]="classMap" (click)="$event.preventDefault()">
+                <li *ngFor="let tabz of tabs" [ngClass]="['nav-item', 'tab-label', tabz.customClass || '']" [class.active]="tabz.active" [class.disabled]="tabz.disabled">
+                    <a href="javascript:void(0);" class="nav-link" [attr.id]="tabz.id ? tabz.id + '-link' : ''" [class.active]="tabz.active"
+                        [class.disabled]="tabz.disabled" (click)="onSelectingTab(tabz)" [title]="tabz.id">
+                        <span [ngClass]="['icon', 'file', tabz.icon || '']">{{ tabz.title }}</span>
+                        <span *ngIf="tabz.removable" (click)="$event.preventDefault(); onRemovingTab(tabz);" class="bs-remove-tab"></span>
+                    </a>
+                </li>
+            </ul>
+        </perfect-scrollbar>
+    </div>
+
+    <div class="editor-actions">
+        <div class="monaco-toolbar">
+            <div class="monaco-action-bar animated">
+                <ng-container [ngTemplateOutlet]="actionsRef"></ng-container>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="tab-content-wrap" [style.height]="height + 'px'" style="overflow: auto">
+    <!-- <app-dynamic-component [componentName] = "currentTab?.componentName" ></app-dynamic-component> -->
+    <!-- <perfect-scrollbar> -->
+        <!-- <ng-container #tabContent></ng-container> -->
+    <!-- </perfect-scrollbar> -->
+
+    <ng-template ngFor let-tab [ngForOf]="tabs" let-i="index">
+        <!-- <div [ngClass]="tab.active?'tab-content active':'tab-content'"> -->
+        <farris-panelFrame
+            *ngIf="tab.active || keepTabContent"
+            [ngClass]="tab.active?'tab-content active':'tab-content'"
+            [src]="tab.elementUrl"
+        ></farris-panelFrame>
+        <!-- </div> -->
+    </ng-template>
+</div>

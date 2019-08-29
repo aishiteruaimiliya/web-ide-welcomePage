@@ -1,0 +1,32 @@
+<div *ngFor="let propItem of category.properties">
+    <div *ngIf="propItem.propertyType != 'cascade'" class="px-2">
+        <webide-property-item (valueChanged)="_itemChanged($event)" (submitModal)="_submitModal($event)" [elementValue]="data[propItem.propertyID]"
+            [elementConfig]="propItem"></webide-property-item>
+    </div>
+
+    <farris-panel *ngIf="propItem.propertyType == 'cascade' && _checkCascadeVisible(propItem)" [collapse]="propItem.isCollapse || true">
+        <farris-panel-item class="propertyCascadeItem" [value]="propItem.propertyID">
+            <ng-template #headTempl>
+                <div class="form-group farris-form-group">
+                    <label class="col-form-label pl-2">
+                        <span class="farris-label-text">{{propItem.propertyName}}</span>
+                    </label>
+                    <div class="farris-input-wrap">
+                        <input type="input" class="form-control form-control-sm" readonly [value]="_valueStringify(propItem,data[propItem.propertyID])">
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template #contentTempl>
+                <div *ngFor="let cascadeItem of propItem.cascadeConfig" class="px-2">
+                    <webide-property-item (valueChanged)="_cascadeitemChanged($event,propItem.propertyID)"
+                        (submitModal)="__cascadeitemSubmitModal($event, propItem.propertyID)"
+                        [elementValue]="data[propItem.propertyID]?data[propItem.propertyID][cascadeItem.propertyID]:''"
+                        [elementConfig]="cascadeItem"></webide-property-item>
+                </div>
+
+            </ng-template>
+        </farris-panel-item>
+    </farris-panel>
+
+
+</div>

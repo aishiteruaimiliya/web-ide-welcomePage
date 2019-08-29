@@ -1,0 +1,39 @@
+<div class="part panel terminal" id="workbench.parts.terminal" role="complementary" style="
+right: 0px;
+bottom: 0px;
+left: 0px;
+position: absolute;" [ngStyle]="style">
+
+  <div class="title">
+    <div class="composite-bar">
+      <div class="monaco-action-bar">
+        <ul class="actions-container">
+          <li class="action-item checked">
+            <a class="action-label">终端</a>
+          </li>
+          <li class="action-item">
+            <a class="action-label">输出</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="title-actions">
+      <div class="monaco-action-bar">
+        <ul class="actions-container">
+          <li class="action-item">
+            <a class="action-label icon chevron-up"></a>
+          </li>
+          <li class="action-item"  (click)="collapse()">
+            <a class="action-label icon hide-panel"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div ngDraggable *ngIf="isOpen" [bounds]="bounds" [region]="'south'" [inBounds]="true" (movingOffset)="onMoving($event)" #horizontalBar
+  class="monaco-sash horizontal" style="height: 4px; left:0px; width: 100%;" [style.top]="originalTop"></div>

@@ -1,0 +1,5 @@
+[
+    { "code": "zh-CHS", "name": "简体中文", "order": 0, "default": true },
+    { "code": "zh-CHT", "name": "繁体中文", "order": 1, "default": false },
+    { "code": "en", "name": "英语", "order": 2, "default":false }
+]

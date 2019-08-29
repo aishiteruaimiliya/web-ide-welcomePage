@@ -1,0 +1,29 @@
+.propertyCascadeItem {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.propertyCascadeItem .card-header {
+    background-color: transparent !important;
+    padding: 4px 16px !important;
+    color: inherit !important;
+}
+
+.propertyCascadeItem .card-header .panel-item-title {
+    width: 100%;
+}
+
+.propertyCascadeItem .card-header .panel-item-title .farris-input-wrap {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.propertyCascadeItem .f-accordion-collapse, .propertyCascadeItem .f-accordion-expand {
+    left: 0px !important;
+    top: 11px;
+    position: absolute;
+}
+
+.propertyCascadeItem .card-body {
+    padding: 3px 12px !important;
+}

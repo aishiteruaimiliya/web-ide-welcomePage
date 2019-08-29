@@ -1,0 +1,576 @@
+{
+    "module": {
+        "id": "double-list-template",
+        "code": "double-list-template",
+        "name": "双列表模板",
+        "caption": "双列表模板",
+        "type": "Module",
+        "creator": "wang-xh",
+        "creationDate": "2018-08-30 10:56:00",
+        "updateVersion": "190123",
+        "showTitle": true,
+        "bootstrap": "double-list-template",
+        "schemas": [],
+        "states": [],
+        "contents": [],
+        "stateMachines": [],
+        "viewmodels": [
+            {
+                "id": "root-viewmodel",
+                "code": "root-viewmodel",
+                "name": "root-viewmodel",
+                "fields": [],
+                "stateMachine": "",
+                "serviceRefs": [],
+                "commands": [
+                    {
+                        "id": "c95f3bf1-824b-46e8-9f8b-6f2ef74d4dc8",
+                        "code": "Close1",
+                        "name": "关闭",
+                        "params": [
+                            {
+                                "name": "url",
+                                "shownName": "上级菜单Url",
+                                "value": "",
+                                "description": null
+                            },
+                            {
+                                "name": "params",
+                                "shownName": "路由参数",
+                                "value": "",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "Close",
+                        "cmpId": "26436aa8-88a7-4aee-bf0b-9843c1e8afbf",
+                        "extensions": []
+                    }
+                ],
+                "states": [],
+                "bindTo": "/"
+            },
+            {
+                "id": "left-data-grid-component-viewmodel",
+                "code": "left-data-grid-component-viewmodel",
+                "name": "left-data-grid-component-viewmodel",
+                "fields": [],
+                "commands": [
+                    {
+                        "id": "27df6df8-6434-44d2-ba0d-e3a7ec5a706f",
+                        "code": "LoadNavList1",
+                        "name": "加载导航列表数据",
+                        "params": [],
+                        "handlerName": "LoadNavList",
+                        "cmpId": "26436aa8-88a7-4aee-bf0b-9843c1e8afbf",
+                        "extensions": []
+                    },
+                    {
+                        "id": "5fadb913-41e9-4bc0-ad61-1d25abcc1d36",
+                        "code": "LoadSubList1",
+                        "name": "加载子列表数据",
+                        "params": [
+                            {
+                                "name": "fid",
+                                "shownName": "子列表数据父id",
+                                "value": "{DATA~/left-data-grid-component/id}",
+                                "description": null
+                            },
+                            {
+                                "name": "frameId",
+                                "shownName": "子列表框架id",
+                                "value": "right-data-grid-component",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "LoadSubList",
+                        "cmpId": "26436aa8-88a7-4aee-bf0b-9843c1e8afbf",
+                        "extensions": []
+                    }
+                ],
+                "serviceRefs": [],
+                "states": [],
+                "bindTo": "/",
+                "parent": "root-viewmodel"
+            },
+            {
+                "id": "right-data-grid-component-viewmodel",
+                "code": "right-data-grid-component-viewmodel",
+                "name": "right-data-grid-component-viewmodel",
+                "fields": [],
+                "commands": [
+                    {
+                        "id": "fd993ac1-8772-4048-a997-083e2fe400b4",
+                        "code": "Remove1",
+                        "name": "删除数据",
+                        "params": [
+                            {
+                                "name": "id",
+                                "shownName": "数据id",
+                                "value": "{DATA~/right-data-grid-component/childTableCodes/id}",
+                                "description": "要删除的数据id"
+                            }
+                        ],
+                        "handlerName": "Remove",
+                        "cmpId": "26436aa8-88a7-4aee-bf0b-9843c1e8afbf",
+                        "extensions": []
+                    },
+                    {
+                        "id": "0bff6d80-33f5-46a5-8e42-3c2631bdfcef",
+                        "code": "RouteToAdd1",
+                        "name": "路由到新增页面",
+                        "params": [
+                            {
+                                "name": "url",
+                                "shownName": "卡片Url",
+                                "value": "",
+                                "description": ""
+                            },
+                            {
+                                "name": "params",
+                                "shownName": "路由参数",
+                                "value": "{\"action\":\"LoadAndAdd1\"}",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "RouteToAdd",
+                        "cmpId": "26436aa8-88a7-4aee-bf0b-9843c1e8afbf",
+                        "extensions": []
+                    },
+                    {
+                        "id": "1a666047-59ec-461d-ac44-bbf067865ac5",
+                        "code": "RouteToEdit1",
+                        "name": "路由到编辑页面",
+                        "params": [
+                            {
+                                "name": "url",
+                                "shownName": "卡片Url",
+                                "value": "",
+                                "description": null
+                            },
+                            {
+                                "name": "params",
+                                "shownName": "路由参数",
+                                "value": "{\"action\":\"LoadAndEdit1\", \"id\":\"{DATA~/right-data-grid-component/childTableCodes/id}\"}",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "RouteToEdit",
+                        "cmpId": "26436aa8-88a7-4aee-bf0b-9843c1e8afbf",
+                        "extensions": []
+                    },
+                    {
+                        "id": "c383dcc6-1270-473a-9b71-78d695788231",
+                        "code": "RouteToView1",
+                        "name": "路由到查看页面",
+                        "params": [
+                            {
+                                "name": "url",
+                                "shownName": "卡片Url",
+                                "value": "",
+                                "description": null
+                            },
+                            {
+                                "name": "params",
+                                "shownName": "路由参数",
+                                "value": "{\"action\":\"LoadAndView1\", \"id\":\"{DATA~/right-data-grid-component/childTableCodes/id}\"}",
+                                "description": null
+                            }
+                        ],
+                        "handlerName": "RouteToView",
+                        "cmpId": "26436aa8-88a7-4aee-bf0b-9843c1e8afbf",
+                        "extensions": []
+                    }
+                ],
+                "serviceRefs": [],
+                "states": [],
+                "bindTo": "/",
+                "parent": "root-viewmodel"
+            }
+        ],
+        "components": [
+            {
+                "id": "root-component",
+                "type": "Component",
+                "componentType": "Frame",
+                "viewModel": "root-viewmodel",
+                "onInit": "",
+                "contents": [
+                    {
+                        "id": "root-layout",
+                        "type": "ContentContainer",
+                        "appearance": {
+                            "class": "farris-main-area flex-column"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [
+                            {
+                                "id": "page-header",
+                                "type": "ContentContainer",
+                                "appearance": {
+                                    "class": "farris-header"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "title": null,
+                                "contents": [
+                                    {
+                                        "id": "header-nav",
+                                        "type": "ContentContainer",
+                                        "appearance": {
+                                            "class": "navbar p-0"
+                                        },
+                                        "border": null,
+                                        "font": null,
+                                        "margin": null,
+                                        "padding": null,
+                                        "size": null,
+                                        "title": null,
+                                        "contents": [
+                                            {
+                                                "id": "page-header-title",
+                                                "type": "DisplayField",
+                                                "appearance": {
+                                                    "class": "farris-form-title mr-auto"
+                                                },
+                                                "border": null,
+                                                "font": null,
+                                                "margin": null,
+                                                "padding": null,
+                                                "size": null,
+                                                "title": "",
+                                                "binding": null,
+                                                "displayTemplate": ""
+                                            },
+                                            {
+                                                "id": "page-header-toolbar",
+                                                "type": "ButtonGroup",
+                                                "appearance": {
+                                                    "class": "btn-toolbar btn-group-lg"
+                                                },
+                                                "border": null,
+                                                "font": null,
+                                                "margin": null,
+                                                "padding": null,
+                                                "size": null,
+                                                "contents": [
+                                                    {
+                                                        "id": "button-add",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-primary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "disable": false,
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "新增",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.right-data-grid-component-viewmodel.RouteToAdd1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-edit",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": false,
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "编辑",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.right-data-grid-component-viewmodel.RouteToEdit1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-view",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": false,
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "查看",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.right-data-grid-component-viewmodel.RouteToView1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-delete",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": false,
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "删除",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.right-data-grid-component-viewmodel.Remove1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-close",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": false,
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "关闭",
+                                                        "textAligment": "center",
+                                                        "click": "Close1",
+                                                        "template": null
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "main-container",
+                                "type": "ContentContainer",
+                                "appearance": {
+                                    "class": "row no-gutters flex-fill farris-split-section m-2"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "contents": [
+                                    {
+                                        "id": "left-list-container",
+                                        "type": "ContentContainer",
+                                        "appearance": {
+                                            "class": "col-12 col-md-4 d-flex flex-column farris-lsection px-0"
+                                        },
+                                        "border": null,
+                                        "font": null,
+                                        "margin": null,
+                                        "padding": null,
+                                        "size": null,
+                                        "contents": [
+                                            {
+                                                "id": "left-data-grid-component-ref",
+                                                "type": "ComponentRef",
+                                                "component": "left-data-grid-component"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "right-list-container",
+                                        "type": "ContentContainer",
+                                        "appearance": {
+                                            "class": "col-12 col-md-8 d-flex flex-column farris-rsection"
+                                        },
+                                        "border": null,
+                                        "font": null,
+                                        "margin": null,
+                                        "padding": null,
+                                        "size": null,
+                                        "contents": [
+                                            {
+                                                "id": "right-data-grid-component-ref",
+                                                "type": "ComponentRef",
+                                                "component": "right-data-grid-component"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "left-data-grid-component",
+                "type": "Component",
+                "componentType": "dataGrid",
+                "viewModel": "left-data-grid-component-viewmodel",
+                "appearance": {
+                    "class": "flex-fill flex-column d-flex"
+                },
+                "onInit": "LoadNavList1",
+                "contents": [
+                    {
+                        "id": "left-data-grid-layout",
+                        "type": "ContentContainer",
+                        "appearance": {
+                            "class": "flex-fill flex-column d-flex"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [
+                            {
+                                "id": "left-data-grid",
+                                "type": "DataGrid",
+                                "appearance": {
+                                    "class": "flex-fill w-100"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "dataSource": "",
+                                "fields": [],
+                                "focusedItem": null,
+                                "focusedIndex": null,
+                                "pagination": null,
+                                "identifyField": null,
+                                "multiSelect": null,
+                                "selectable": null,
+                                "itemTemplate": null,
+                                "toolBar": null,
+                                "sortable": false,
+                                "sort": null,
+                                "summary": null,
+                                "groupable": null,
+                                "group": null,
+                                "onSelectionChange": "LoadSubList1",
+                                "fieldEditable": false,
+                                "appendRow": null
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "right-data-grid-component",
+                "type": "Component",
+                "componentType": "dataGrid",
+                "viewModel": "right-data-grid-component-viewmodel",
+                "appearance": {
+                    "class": "flex-fill flex-column d-flex"
+                },
+                "onInit": "",
+                "contents": [
+                    {
+                        "id": "right-data-grid-layout",
+                        "type": "ContentContainer",
+                        "appearance": {
+                            "class": "flex-fill flex-column d-flex"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [
+                            {
+                                "id": "right-data-grid",
+                                "type": "DataGrid",
+                                "appearance": {
+                                    "class": "flex-fill w-100"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "dataSource": "",
+                                "fields": [],
+                                "focusedItem": null,
+                                "focusedIndex": null,
+                                "pagination": null,
+                                "identifyField": null,
+                                "multiSelect": null,
+                                "selectable": null,
+                                "itemTemplate": null,
+                                "toolBar": null,
+                                "sortable": false,
+                                "sort": null,
+                                "summary": null,
+                                "groupable": null,
+                                "group": null,
+                                "onSelectionChange": "",
+                                "fieldEditable": false,
+                                "appendRow": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "webcmds": [
+            {
+                "id": "26436aa8-88a7-4aee-bf0b-9843c1e8afbf",
+                "path": "/projects/packages/'Inspur.GS.Gsp.Web.WebCmp/webcmd",
+                "name": "ListListController.webcmd",
+                "refedHandlers": [
+                    {
+                        "host": "c95f3bf1-824b-46e8-9f8b-6f2ef74d4dc8",
+                        "handler": "Close"
+                    },
+                    {
+                        "host": "27df6df8-6434-44d2-ba0d-e3a7ec5a706f",
+                        "handler": "LoadNavList"
+                    },
+                    {
+                        "host": "5fadb913-41e9-4bc0-ad61-1d25abcc1d36",
+                        "handler": "LoadSubList"
+                    },
+                    {
+                        "host": "fd993ac1-8772-4048-a997-083e2fe400b4",
+                        "handler": "Remove"
+                    },
+                    {
+                        "host": "0bff6d80-33f5-46a5-8e42-3c2631bdfcef",
+                        "handler": "RouteToAdd"
+                    },
+                    {
+                        "host": "1a666047-59ec-461d-ac44-bbf067865ac5",
+                        "handler": "RouteToEdit"
+                    },
+                    {
+                        "host": "c383dcc6-1270-473a-9b71-78d695788231",
+                        "handler": "RouteToView"
+                    }
+                ]
+            }
+        ],
+        "serviceRefs": []
+    }
+}

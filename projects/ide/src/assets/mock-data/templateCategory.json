@@ -1,0 +1,18 @@
+[
+    {
+        "key": "",
+        "value": "全部"
+    },
+    {
+        "key": "list",
+        "value": "列表模板"
+    },
+    {
+        "key": "card",
+        "value": "卡片模板"
+    },
+    {
+        "key": "dictionary",
+        "value": "字典模板"
+    }
+]

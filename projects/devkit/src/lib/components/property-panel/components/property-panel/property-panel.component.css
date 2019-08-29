@@ -1,0 +1,95 @@
+:host {
+    width: inherit;
+    height: inherit;
+}
+
+.propertyPanel {
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    border: 1px solid #BCC1C4;    
+    background-color: #f0f2f5;
+}
+
+.propertyPanel .title {
+    position: relative;
+}
+
+.propertyPanel .title>.title-label {
+    line-height: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 12px;
+    background: #E3E6E8;
+    color: #333333;
+}
+
+.propertyPanel .title .title-actions {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    padding-left: 35px;
+    height: 35px;
+    -ms-flex: 1;
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.propertyPanel .title .title-actions {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+
+.propertyPanel .property-grid .group-label.expand {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23646465' d='M11 10H5.344L11 4.414V10z'/%3E%3C/svg%3E");
+}
+
+.propertyPanel .property-grid .group-label {
+    line-height: 30px;
+    display: block;
+    padding-left: 18px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 0px 50%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #cfd3d6;
+    color: #6c6c6c;
+}
+
+.propertyPanel .property-grid .group-label.collapse {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23646465' d='M6 4v8l4-4-4-4zm1 2.414L8.586 8 7 9.586V6.414z'/%3E%3C/svg%3E");
+}
+
+.propertyPanel .panel-body {
+    overflow: auto;
+    height: 100%;
+}
+
+.propertyPanel .property-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.propertyPanel .action-item {
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 50ms ease;
+    position: relative;
+    padding: 0px;
+}
+
+.propertyPanel .action-item .hide-panel {
+    height: 35px;
+    display: block;
+    line-height: 35px;
+    min-width: 28px;
+    color: rgba(66, 66, 66, 0.75);
+    background-color: transparent !important;
+    outline: none !important;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.784 8L13 11.217 11.215 13 8.001 9.786 4.785 13 3 11.216l3.214-3.215L3 4.785 4.784 3 8 6.216 11.216 3 13 4.785 9.784 8.001z' fill='%23424242'/%3E%3C/svg%3E") no-repeat 50% 50%;
+}

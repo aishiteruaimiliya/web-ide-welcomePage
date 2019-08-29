@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head lang='en'>
+	<base href="/">
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width'>
+	<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel="stylesheet" href="assets/farris-all.css">
+	<script type="systemjs-importmap" src="{{=it.importMapPath()}}"></script>
+	<title>GSP Cloud IDE - 云ERP集成开发环境</title>
+</head>
+
+<body data-sa-theme="1" class="ide-dark">
+	<app-root></app-root>
+
+	<!-- <script type="systemjs-importmap">
+		{"imports":{"rxjs":"rxjs.js","rxjs/operators":"rxjs/operators.js","@angular/animations":"@angular/animations.js","@angular/animations/browser":"@angular/animations/browser.js","@angular/common":"@angular/common.js","@angular/common/http":"@angular/common/http.js","@angular/compiler":"@angular/compiler.js","@angular/core":"@angular/core.js","@angular/forms":"@angular/forms.js","@angular/language-service":"@angular/language-service.js","@angular/platform-browser":"@angular/platform-browser.js","@angular/platform-browser/animations":"@angular/platform-browser/animations.js","@angular/platform-browser-dynamic":"@angular/platform-browser-dynamic.js","@angular/router":"@angular/router.js","@progress/kendo-angular-buttons":"@progress/kendo-angular-buttons.js","@progress/kendo-angular-dateinputs":"@progress/kendo-angular-dateinputs.js","@progress/kendo-angular-dialog":"@progress/kendo-angular-dialog.js","@progress/kendo-angular-dropdowns":"@progress/kendo-angular-dropdowns.js","@progress/kendo-angular-excel-export":"@progress/kendo-angular-excel-export.js","@progress/kendo-angular-grid":"@progress/kendo-angular-grid.js","@progress/kendo-angular-inputs":"@progress/kendo-angular-inputs.js","@progress/kendo-angular-intl":"@progress/kendo-angular-intl.js","@progress/kendo-angular-intl/locales/zh/all":"@progress/kendo-angular-intl/locales/zh/all.js","@progress/kendo-angular-l10n":"@progress/kendo-angular-l10n.js","@progress/kendo-angular-label":"@progress/kendo-angular-label.js","@progress/kendo-angular-layout":"@progress/kendo-angular-layout.js","@progress/kendo-angular-pdf-export":"@progress/kendo-angular-pdf-export.js","@progress/kendo-angular-popup":"@progress/kendo-angular-popup.js","@progress/kendo-angular-resize-sensor":"@progress/kendo-angular-resize-sensor.js","@progress/kendo-common":"@progress/kendo-common.js","@progress/kendo-data-query":"@progress/kendo-data-query.js","@progress/kendo-date-math":"@progress/kendo-date-math.js","@progress/kendo-drawing":"@progress/kendo-drawing.js","@progress/kendo-file-saver":"@progress/kendo-file-saver.js","@progress/kendo-ooxml":"@progress/kendo-ooxml.js","@progress/kendo-popup-common":"@progress/kendo-popup-common.js","lodash-es":"lodash-es.js","date-fns":"date-fns.js","perfect-scrollbar":"perfect-scrollbar.js","resize-observer-polyfill":"resize-observer-polyfill.js","@farris/ui-common":"@farris/ui-common.js","@farris/ui-common/column":"@farris/ui-common/column.js","@farris/ui-common/date":"@farris/ui-common/date.js","@farris/ui-common/number":"@farris/ui-common/number.js","@farris/ui-datatable":"@farris/ui-datatable.js","@farris/ui-dialog":"@farris/ui-dialog.js","@farris/ui-draggable":"@farris/ui-draggable.js","@farris/ui-dropdown":"@farris/ui-dropdown.js","@farris/ui-filter-editor":"@farris/ui-filter-editor.js","@farris/ui-input-group":"@farris/ui-input-group.js","@farris/ui-language-textbox":"@farris/ui-language-textbox.js","@farris/ui-layout":"@farris/ui-layout.js","@farris/ui-loading":"@farris/ui-loading.js","@farris/ui-lookup":"@farris/ui-lookup.js","@farris/ui-messager":"@farris/ui-messager.js","@farris/ui-modal":"@farris/ui-modal.js","@farris/ui-multi-select":"@farris/ui-multi-select.js","@farris/ui-notify":"@farris/ui-notify.js","@farris/ui-pagination":"@farris/ui-pagination.js","@farris/ui-panel":"@farris/ui-panel.js","@farris/ui-perfect-scrollbar":"@farris/ui-perfect-scrollbar.js","@farris/ui-response-toolbar":"@farris/ui-response-toolbar.js","@farris/ui-shortcuts":"@farris/ui-shortcuts.js","@farris/ui-treetable":"@farris/ui-treetable.js","@farris/devkit":"@farris/devkit.js","main":"main.js"}}
+	</script> -->
+
+	<script src="{{=it.polyfillsPath()}}"></script>
+	<script>
+		System.import('./main.js');
+	</script>
+</body>
+
+</html>

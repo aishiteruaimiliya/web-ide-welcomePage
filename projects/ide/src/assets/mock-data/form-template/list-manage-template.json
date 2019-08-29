@@ -1,0 +1,476 @@
+{
+  "module": {
+    "id": "list-manage-template",
+    "code": "list-manage-template",
+    "name": "管理列表模板",
+    "caption": "管理列表模板",
+    "type": "Module",
+    "creator": "wang-xh",
+    "creationDate": "2018-08-30 10:56:00",
+    "updateVersion": "190123",
+    "showTitle": true,
+    "bootstrap": "list-template",
+    "schemas": [],
+    "states": [],
+    "contents": [],
+    "stateMachines": [],
+    "viewmodels": [
+      {
+        "id": "root-viewmodel",
+        "code": "root-viewmodel",
+        "name": "root-viewmodel",
+        "fields": [],
+        "stateMachine": null,
+        "serviceRefs": [],
+        "commands": [
+          {
+            "id": "279090c9-553d-4936-b1ab-c485ec7e92fc",
+            "code": "Load1",
+            "name": "加载数据",
+            "params": [],
+            "handlerName": "Load",
+            "cmpId": "d7ce1ba6-49c7-4a27-805f-f78f42e72725",
+            "extensions": []
+          },
+          {
+            "id": "d61e870d-464e-4f68-9a70-2dd1da750c59",
+            "code": "Add1",
+            "name": "新增数据",
+            "params": [
+              {
+                "name": "transitionAction",
+                "shownName": "迁移动作",
+                "value": "Create",
+                "description": null
+              }
+            ],
+            "handlerName": "Add",
+            "cmpId": "d7ce1ba6-49c7-4a27-805f-f78f42e72725",
+            "extensions": []
+          },
+          {
+            "id": "dd1a68e5-f404-4c07-81ab-77e3cb545c4f",
+            "code": "Edit1",
+            "name": "编辑数据",
+            "params": [
+              {
+                "name": "transitionAction",
+                "shownName": "迁移动作",
+                "value": "Edit",
+                "description": null
+              }
+            ],
+            "handlerName": "Edit",
+            "cmpId": "d7ce1ba6-49c7-4a27-805f-f78f42e72725",
+            "extensions": []
+          },
+          {
+            "id": "05da19e1-247e-4d03-bad7-48ce024ef5c3",
+            "code": "Save1",
+            "name": "保存数据",
+            "params": [
+              {
+                "name": "transitionAction",
+                "shownName": "迁移动作",
+                "value": "Save",
+                "description": null
+              }
+            ],
+            "handlerName": "Save",
+            "cmpId": "d7ce1ba6-49c7-4a27-805f-f78f42e72725",
+            "extensions": []
+          },
+          {
+            "id": "c011b77d-5baf-49be-b35a-19e89d69134f",
+            "code": "Cancel1",
+            "name": "撤销变更",
+            "params": [
+              {
+                "name": "transitionAction",
+                "shownName": "迁移动作",
+                "value": "Cancel",
+                "description": null
+              }
+            ],
+            "handlerName": "Cancel",
+            "cmpId": "d7ce1ba6-49c7-4a27-805f-f78f42e72725",
+            "extensions": []
+          },
+          {
+            "id": "9a011b2d-27e3-4e8f-b86d-46c58e5abffe",
+            "code": "Remove1",
+            "name": "删除",
+            "params": [
+              {
+                "name": "id",
+                "shownName": "数据id",
+                "value": "{DATA~/data-grid-component/id}",
+                "description": null
+              },
+              {
+                "name": "ifSave",
+                "shownName": "是否保存",
+                "value": "{STATEMACHINE~/renderStates/canEdit}",
+                "description": null
+              }
+            ],
+            "handlerName": "Remove",
+            "cmpId": "d7ce1ba6-49c7-4a27-805f-f78f42e72725",
+            "extensions": []
+          },
+          {
+            "id": "d44e2268-0c19-4877-ab82-8959c89df469",
+            "code": "Close1",
+            "name": "关闭",
+            "params": [
+              {
+                "name": "url",
+                "shownName": "上级Url",
+                "value": "ParentUrl",
+                "description": null
+              },
+              {
+                "name": "params",
+                "shownName": "路由参数",
+                "value": "",
+                "description": null
+              }
+            ],
+            "handlerName": "Close",
+            "cmpId": "d7ce1ba6-49c7-4a27-805f-f78f42e72725",
+            "extensions": []
+          }
+        ],
+        "states": [],
+        "bindTo": "/"
+      },
+      {
+        "id": "data-grid-component-viewmodel",
+        "code": "data-grid-component-viewmodel",
+        "name": "data-grid-component-viewmodel",
+        "fields": [],
+        "serviceRefs": [],
+        "commands": [],
+        "states": [],
+        "bindTo": "/",
+        "parent": "root-viewmodel"
+      }
+    ],
+    "components": [
+      {
+        "id": "root-component",
+        "type": "Component",
+        "componentType": "Frame",
+        "viewModel": "root-viewmodel",
+        "onInit": "Load1",
+        "contents": [
+          {
+            "id": "root-layout",
+            "type": "ContentContainer",
+            "appearance": {
+              "class": "farris-main-area flex-column"
+            },
+            "border": null,
+            "font": null,
+            "margin": null,
+            "padding": null,
+            "size": null,
+            "contents": [
+              {
+                "id": "page-header",
+                "type": "ContentContainer",
+                "appearance": {
+                  "class": "farris-header"
+                },
+                "border": null,
+                "font": null,
+                "margin": null,
+                "padding": null,
+                "size": null,
+                "title": null,
+                "contents": [
+                  {
+                    "id": "header-nav",
+                    "type": "ContentContainer",
+                    "appearance": {
+                      "class": "navbar p-0"
+                    },
+                    "border": null,
+                    "font": null,
+                    "margin": null,
+                    "padding": null,
+                    "size": null,
+                    "title": null,
+                    "contents": [
+                      {
+                        "id": "page-header-title",
+                        "type": "DisplayField",
+                        "appearance": {
+                          "class": "farris-form-title mr-auto"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "title": "",
+                        "binding": null,
+                        "displayTemplate": ""
+                      },
+                      {
+                        "id": "page-header-toolbar",
+                        "type": "ButtonGroup",
+                        "appearance": {
+                          "class": "btn-toolbar btn-group-lg"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [
+                          {
+                            "id": "button-add",
+                            "type": "Button",
+                            "appearance": {
+                              "class": "btn btn-primary mr-2"
+                            },
+                            "border": null,
+                            "font": null,
+                            "margin": null,
+                            "padding": null,
+                            "disable": "!viewModel.stateMachine['canAdd']",
+                            "icon": null,
+                            "iconPosition": null,
+                            "seperate": true,
+                            "text": "新增",
+                            "textAligment": "center",
+                            "click": "Add1",
+                            "template": null
+                          },
+                          {
+                            "id": "button-edit",
+                            "type": "Button",
+                            "appearance": {
+                              "class": "btn btn-secondary mr-2"
+                            },
+                            "border": null,
+                            "font": null,
+                            "margin": null,
+                            "padding": null,
+                            "size": null,
+                            "disable": "!viewModel.stateMachine['canEdit']",
+                            "icon": null,
+                            "iconPosition": null,
+                            "seperate": true,
+                            "text": "编辑",
+                            "textAligment": "center",
+                            "click": "Edit1",
+                            "template": null
+                          },
+                          {
+                            "id": "button-save",
+                            "type": "Button",
+                            "appearance": {
+                              "class": "btn btn-secondary mr-2"
+                            },
+                            "border": null,
+                            "font": null,
+                            "margin": null,
+                            "padding": null,
+                            "size": null,
+                            "disable": "!viewModel.stateMachine['canSave']",
+                            "icon": null,
+                            "iconPosition": null,
+                            "seperate": true,
+                            "text": "保存",
+                            "textAligment": "center",
+                            "click": "Save1",
+                            "template": null
+                          },
+                          {
+                            "id": "button-cancel",
+                            "type": "Button",
+                            "appearance": {
+                              "class": "btn btn-secondary mr-2"
+                            },
+                            "border": null,
+                            "font": null,
+                            "margin": null,
+                            "padding": null,
+                            "size": null,
+                            "disable": "!viewModel.stateMachine['canCancel']",
+                            "icon": null,
+                            "iconPosition": null,
+                            "seperate": true,
+                            "text": "取消",
+                            "textAligment": "center",
+                            "click": "Cancel1",
+                            "template": null
+                          },
+                          {
+                            "id": "button-delete",
+                            "type": "Button",
+                            "appearance": {
+                              "class": "btn btn-secondary mr-2"
+                            },
+                            "border": null,
+                            "font": null,
+                            "margin": null,
+                            "padding": null,
+                            "size": null,
+                            "disable": "!viewModel.stateMachine['canRemove']",
+                            "icon": null,
+                            "iconPosition": null,
+                            "seperate": true,
+                            "text": "删除",
+                            "textAligment": "center",
+                            "click": "Remove1",
+                            "template": null
+                          },
+                          {
+                            "id": "button-close",
+                            "type": "Button",
+                            "appearance": {
+                              "class": "btn btn-secondary mr-2"
+                            },
+                            "border": null,
+                            "font": null,
+                            "margin": null,
+                            "padding": null,
+                            "size": null,
+                            "disable": false,
+                            "icon": null,
+                            "iconPosition": null,
+                            "seperate": true,
+                            "text": "关闭",
+                            "textAligment": "center",
+                            "click": "Close1",
+                            "template": null
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "main-container",
+                "type": "ContentContainer",
+                "appearance": {
+                  "class": "flex-fill d-flex flex-column farris-split-section m-2"
+                },
+                "border": null,
+                "font": null,
+                "margin": null,
+                "padding": null,
+                "size": null,
+                "contents": [
+                  {
+                    "id": "data-grid-component-ref",
+                    "type": "ComponentRef",
+                    "component": "data-grid-component"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "data-grid-component",
+        "type": "Component",
+        "componentType": "dataGrid",
+        "viewModel": "data-grid-component-viewmodel",
+        "appearance": {
+          "class": "flex-fill d-flex"
+        },
+        "onInit": "",
+        "contents": [
+          {
+            "id": "data-grid-layout",
+            "type": "ContentContainer",
+            "appearance": {
+              "class": "d-flex flex-column w-100"
+            },
+            "border": null,
+            "font": null,
+            "margin": null,
+            "padding": null,
+            "size": null,
+            "contents": [
+              {
+                "id": "dataGrid",
+                "type": "DataGrid",
+                "appearance": {
+                  "class": "flex-fill w-100 "
+                },
+                "border": null,
+                "font": null,
+                "margin": null,
+                "padding": null,
+                "size": null,
+                "dataSource": "",
+                "fields": [],
+                "focusedItem": null,
+                "focusedIndex": null,
+                "pagination": null,
+                "identifyField": null,
+                "multiSelect": null,
+                "selectable": null,
+                "itemTemplate": null,
+                "toolBar": null,
+                "sortable": false,
+                "sort": null,
+                "summary": null,
+                "groupable": null,
+                "group": null,
+                "onSelectionChange": "",
+                "fieldEditable": true,
+                "appendRow": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "webcmds": [
+      {
+        "id": "d7ce1ba6-49c7-4a27-805f-f78f42e72725",
+        "path": "/projects/packages/'Inspur.GS.Gsp.Web.WebCmp/webcmd",
+        "name": "EditableListController.webcmd",
+        "refedHandlers": [
+          {
+            "host": "279090c9-553d-4936-b1ab-c485ec7e92fc",
+            "handler": "Load"
+          },
+          {
+            "host": "d61e870d-464e-4f68-9a70-2dd1da750c59",
+            "handler": "Add"
+          },
+          {
+            "host": "dd1a68e5-f404-4c07-81ab-77e3cb545c4f",
+            "handler": "Edit"
+          },
+          {
+            "host": "05da19e1-247e-4d03-bad7-48ce024ef5c3",
+            "handler": "Save"
+          },
+          {
+            "host": "c011b77d-5baf-49be-b35a-19e89d69134f",
+            "handler": "Cancel"
+          },
+          {
+            "host": "9a011b2d-27e3-4e8f-b86d-46c58e5abffe",
+            "handler": "Remove"
+          },
+          {
+            "host": "d44e2268-0c19-4877-ab82-8959c89df469",
+            "handler": "Close"
+          }
+        ]
+      }
+    ],
+    "serviceRefs": []
+  }
+}

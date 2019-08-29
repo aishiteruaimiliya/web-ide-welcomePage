@@ -1,0 +1,43 @@
+/*:host {*/
+  /*display: flex !important;*/
+  /*flex: 1;*/
+  /*flex-direction: column;*/
+  /*height: calc(100vh);*/
+  /*overflow: hidden;*/
+/*}*/
+
+/*.workspace {*/
+  /*flex: 1;*/
+  /*height: calc(100vh - 30vh);*/
+/*}*/
+
+/*.pane-content {*/
+  /*padding: 3px 0 0;*/
+  /*flex: 1;*/
+/*}*/
+
+/*.pane-content > .k-tabstrip{*/
+  /*flex: 1;*/
+/*}*/
+
+/*h3 {*/
+  /*font-size: 1.2em;*/
+  /*margin: 10px 0;*/
+  /*padding: 0;*/
+/*}*/
+
+/*p {*/
+  /*margin: 0;*/
+  /*padding: 0;*/
+/*}*/
+
+.k-i-loading {
+  position: absolute;;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 64px;
+  background-color: rgba(0, 0, 0, .3);
+  color: #2a91fa;
+}

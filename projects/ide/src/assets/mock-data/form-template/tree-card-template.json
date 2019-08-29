@@ -1,0 +1,507 @@
+{
+    "module": {
+        "id": "tree-card-template",
+        "code": "tree-card-template",
+        "name": "树列表-卡片模板",
+        "caption": "树列表-卡片模板",
+        "type": "Module",
+        "creator": "wang-xh",
+        "creationDate": "2018-10-30 10:56:00",
+        "updateVersion": "190123",
+        "showTitle": true,
+        "bootstrap": "tree-card-template",
+        "schemas": [],
+        "states": [],
+        "contents": [],
+        "stateMachines": [],
+        "viewmodels": [
+            {
+                "id": "root-viewmodel",
+                "code": "root-viewmodel",
+                "name": "root-viewmodel",
+                "fields": [],
+                "stateMachine": "",
+                "serviceRefs": [],
+                "commands": [],
+                "states": [],
+                "bindTo": "/"
+            },
+            {
+                "id": "tree-grid-component-viewmodel",
+                "code": "tree-grid-component-viewmodel",
+                "name": "tree-grid-component-viewmodel",
+                "fields": [],
+                "commands": [
+                    {
+                        "id": "b10de35a-6f79-49ed-8e5e-72959ce73c61",
+                        "code": "LoadTree1",
+                        "name": "加载树数据",
+                        "params": [],
+                        "handlerName": "LoadTree",
+                        "cmpId": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                        "extensions": []
+                    },
+                    {
+                        "id": "aa2caeda-76f9-477a-b68d-914d14a1a336",
+                        "code": "LoadCard1",
+                        "name": "加载卡片数据",
+                        "params": [],
+                        "handlerName": "LoadCard",
+                        "cmpId": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                        "extensions": []
+                    },
+                    {
+                        "id": "cf10f2eb-547d-4e6e-9385-b25a6e0959a9",
+                        "code": "AddSibling1",
+                        "name": "新增兄弟节点",
+                        "params": [],
+                        "handlerName": "AddSibling",
+                        "cmpId": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                        "extensions": []
+                    },
+                    {
+                        "id": "59390923-6f53-42ee-9c2c-a95ff9a89550",
+                        "code": "AddChild1",
+                        "name": "新增子节点",
+                        "params": [],
+                        "handlerName": "AddChild",
+                        "cmpId": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                        "extensions": []
+                    },
+                    {
+                        "id": "428cc625-c8b8-45a5-9465-59da516474f7",
+                        "code": "Remove1",
+                        "name": "删除节点",
+                        "params": [],
+                        "handlerName": "Remove",
+                        "cmpId": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                        "extensions": []
+                    }
+                ],
+                "serviceRefs": [],
+                "states": [],
+                "bindTo": "/",
+                "parent": "root-viewmodel"
+            },
+            {
+                "id": "detail-form-component-viewmodel",
+                "code": "detail-form-component-viewmodel",
+                "name": "detail-form-component-viewmodel",
+                "fields": [],
+                "commands": [
+                    {
+                        "id": "fdac76be-212d-4cb0-adbd-e83dddf2194b",
+                        "code": "Edit1",
+                        "name": "编辑",
+                        "params": [],
+                        "handlerName": "Edit",
+                        "cmpId": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                        "extensions": []
+                    },
+                    {
+                        "id": "1f064bb2-975a-4306-8813-39aeced57bc6",
+                        "code": "Save1",
+                        "name": "保存",
+                        "params": [],
+                        "handlerName": "Save",
+                        "cmpId": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                        "extensions": []
+                    },
+                    {
+                        "id": "7dc22d95-586d-4a3a-9493-dc077d059e3b",
+                        "code": "Cancel1",
+                        "name": "取消",
+                        "params": [],
+                        "handlerName": "Cancel",
+                        "cmpId": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                        "extensions": []
+                    }
+                ],
+                "serviceRefs": [],
+                "states": [],
+                "bindTo": "/",
+                "parent": "root-viewmodel"
+            }
+        ],
+        "components": [
+            {
+                "id": "root-component",
+                "type": "Component",
+                "componentType": "Frame",
+                "viewModel": "root-viewmodel",
+                "onInit": "",
+                "contents": [
+                    {
+                        "id": "root-layout",
+                        "type": "ContentContainer",
+                        "appearance": {
+                            "class": "farris-main-area flex-column"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [
+                            {
+                                "id": "page-header",
+                                "type": "ContentContainer",
+                                "appearance": {
+                                    "class": "farris-header"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "title": null,
+                                "contents": [
+                                    {
+                                        "id": "header-nav",
+                                        "type": "ContentContainer",
+                                        "appearance": {
+                                            "class": "navbar p-0"
+                                        },
+                                        "border": null,
+                                        "font": null,
+                                        "margin": null,
+                                        "padding": null,
+                                        "size": null,
+                                        "title": null,
+                                        "contents": [
+                                            {
+                                                "id": "page-header-title",
+                                                "type": "DisplayField",
+                                                "appearance": {
+                                                    "class": "farris-form-title mr-auto"
+                                                },
+                                                "border": null,
+                                                "font": null,
+                                                "margin": null,
+                                                "padding": null,
+                                                "size": null,
+                                                "title": "",
+                                                "binding": null,
+                                                "displayTemplate": ""
+                                            },
+                                            {
+                                                "id": "page-header-toolbar",
+                                                "type": "ButtonGroup",
+                                                "appearance": {
+                                                    "class": "btn-toolbar btn-group-lg"
+                                                },
+                                                "border": null,
+                                                "font": null,
+                                                "margin": null,
+                                                "padding": null,
+                                                "size": null,
+                                                "contents": [
+                                                    {
+                                                        "id": "button-addSibling",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-primary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "disable": "!viewModel.stateMachine['canAdd']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "新增同级",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.tree-grid-component-viewmodel.AddSibling1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-addChild",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-primary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "disable": "!viewModel.stateMachine['canAdd']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "新增子级",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.tree-grid-component-viewmodel.AddChild1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-edit",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": "!viewModel.stateMachine['canEdit']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "编辑",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.detail-form-component-viewmodel.Edit1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-cancel",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": "!viewModel.stateMachine['canCancel']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "取消",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.detail-form-component-viewmodel.Cancel1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-delete",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": "!viewModel.stateMachine['canRemove']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "删除",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.tree-grid-component-viewmodel.Remove1",
+                                                        "template": null
+                                                    },
+                                                    {
+                                                        "id": "button-save",
+                                                        "type": "Button",
+                                                        "appearance": {
+                                                            "class": "btn btn-secondary mr-2"
+                                                        },
+                                                        "border": null,
+                                                        "font": null,
+                                                        "margin": null,
+                                                        "padding": null,
+                                                        "size": null,
+                                                        "disable": "!viewModel.stateMachine['canSave']",
+                                                        "icon": null,
+                                                        "iconPosition": null,
+                                                        "seperate": true,
+                                                        "text": "保存",
+                                                        "textAligment": "center",
+                                                        "click": "root-viewmodel.detail-form-component-viewmodel.Save1",
+                                                        "template": null
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "id": "main-container",
+                                "type": "ContentContainer",
+                                "appearance": {
+                                    "class": "row no-gutters flex-fill farris-split-section m-2"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "contents": [
+                                    {
+                                        "id": "tree-container",
+                                        "type": "ContentContainer",
+                                        "appearance": {
+                                            "class": "col-12 col-md-6 d-flex flex-column farris-lsection px-0"
+                                        },
+                                        "border": null,
+                                        "font": null,
+                                        "margin": null,
+                                        "padding": null,
+                                        "size": null,
+                                        "contents": [
+                                            {
+                                                "id": "tree-grid-component-ref",
+                                                "type": "ComponentRef",
+                                                "component": "tree-grid-component"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "detail-form-container",
+                                        "type": "ContentContainer",
+                                        "appearance": {
+                                            "class": "col-12 col-md-6  farris-rsection farris-overflow-y-auto"
+                                        },
+                                        "border": null,
+                                        "font": null,
+                                        "margin": null,
+                                        "padding": null,
+                                        "size": null,
+                                        "contents": [
+                                            {
+                                                "id": "detail-component-ref",
+                                                "type": "ComponentRef",
+                                                "component": "detail-form-component"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "tree-grid-component",
+                "type": "Component",
+                "componentType": "dataGrid",
+                "viewModel": "tree-grid-component-viewmodel",
+                "appearance": {
+                    "class": "flex-fill flex-column d-flex"
+                },
+                "onInit": "LoadTree1",
+                "contents": [
+                    {
+                        "id": "tree-grid-layout",
+                        "type": "ContentContainer",
+                        "appearance": {
+                            "class": "flex-fill flex-column d-flex"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [
+                            {
+                                "id": "treeGrid",
+                                "type": "TreeGrid",
+                                "appearance": {
+                                    "class": "flex-fill"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "title": "",
+                                "dataSource": "",
+                                "fields": [],
+                                "fixedHeader": true,
+                                "fit": true,
+                                "focusedItem": null,
+                                "focusedIndex": null,
+                                "pagination": null,
+                                "identifyField": null,
+                                "multiSelect": null,
+                                "selectable": null,
+                                "itemTemplate": null,
+                                "toolBar": null,
+                                "sortable": false,
+                                "sort": null,
+                                "summary": null,
+                                "expendAll": null,
+                                "expandLevel": null,
+                                "parentField": null,
+                                "onSelectionChange": "LoadCard1"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "detail-form-component",
+                "type": "Component",
+                "componentType": "form-col-1",
+                "viewModel": "detail-form-component-viewmodel",
+                "onInit": "",
+                "appearance": {
+                    "class": "d-block"
+                },
+                "contents": [
+                    {
+                        "id": "detail-form-layout",
+                        "type": "Form",
+                        "appearance": {
+                            "class": "farris-form d-flex flex-wrap mb-2  farris-form-controls-inline"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [],
+                        "controlsInline": true
+                    }
+                ]
+            }
+        ],
+        "webcmds": [
+            {
+                "id": "8fe977a1-2b32-4f0f-a6b3-2657c4d03574",
+                "path": "/projects/packages/'Inspur.GS.Gsp.Web.WebCmp/webcmd",
+                "name": "TreeCardController.webcmd",
+                "refedHandlers": [
+                    {
+                        "host": "b10de35a-6f79-49ed-8e5e-72959ce73c61",
+                        "handler": "LoadTree"
+                    },
+                    {
+                        "host": "aa2caeda-76f9-477a-b68d-914d14a1a336",
+                        "handler": "LoadCard"
+                    },
+                    {
+                        "host": "cf10f2eb-547d-4e6e-9385-b25a6e0959a9",
+                        "handler": "AddSibling"
+                    },
+                    {
+                        "host": "59390923-6f53-42ee-9c2c-a95ff9a89550",
+                        "handler": "AddChild"
+                    },
+                    {
+                        "host": "428cc625-c8b8-45a5-9465-59da516474f7",
+                        "handler": "Remove"
+                    },
+                    {
+                        "host": "fdac76be-212d-4cb0-adbd-e83dddf2194b",
+                        "handler": "Edit"
+                    },
+                    {
+                        "host": "1f064bb2-975a-4306-8813-39aeced57bc6",
+                        "handler": "Save"
+                    },
+                    {
+                        "host": "7dc22d95-586d-4a3a-9493-dc077d059e3b",
+                        "handler": "Cancel"
+                    }
+                ]
+            }
+        ],
+        "serviceRefs": []
+    }
+}

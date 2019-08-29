@@ -1,0 +1,129 @@
+<div id="workbench.parts.activitybar" class="activitybar" [style.height]="height + 'px'">
+  <!-- autoHeight [position]="{top: -56}" -->
+  <div class="content" [style.height]="height + 'px'">
+    <div class="composite-bar">
+      <div class="monaco-action-bar vertical">
+        <ul class="actions-container" role="toolbar" aria-label="活动视图切换器"> 
+          <li (click)="onSelectedTabChanged(0)" class="action-item" [class.checked]="isActiveTab(0)" role="button" draggable="true"
+            tabindex="0" title="业务导航">
+            <a class="action-label boexplore" title="业务导航"></a>
+          </li>
+          <li (click)="onSelectedTabChanged(1)" class="action-item" [class.checked]="isActiveTab(1)" role="button" draggable="true"
+              tabindex="0"
+              title="资源管理器">
+            <a class="action-label explore" title="资源管理器"></a>
+          </li>
+          <li (click)="onSelectedTabChanged(2)" [class.checked]="isActiveTab(2)" class="action-item" role="button" draggable="true"
+              tabindex="0"
+              title="Git">
+            <a class="action-label toolbox"></a>
+          </li>
+          <li (click)="onSelectedTabChanged(3)" [class.checked]="isActiveTab(3)" class="action-item" role="button" draggable="true"
+              tabindex="0"
+              title="调试 (Ctrl+Shift+D)">
+            <a class="action-label debug"></a>
+          </li>
+          <li (click)="onSelectedTabChanged(4)" [class.checked]="isActiveTab(4)" class="action-item" role="button" draggable="true"
+              tabindex="0"
+              title="扩展 (Ctrl+Shift+X)">
+            <a class="action-label extensions"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class=""></div>
+  </div>
+</div>
+
+<div class="sidebar panel" [style.width]="width - 50 + 'px'" [style.height]="height + 'px'" #sidebar>
+
+  <!-- <div *ngIf="currentTabIndex === 0">
+    <div class="title">
+      <div class="title-label">
+        <span title="资源管理器 (Ctrl+Shift+E)">资源管理器</span>
+      </div>
+      <div class="title-actions">
+        <div class="monaco-toolbar">
+          <div class="monaco-action-bar animated">
+            <ul class="actions-container" role="toolbar" aria-label="资源管理器 操作">
+              <li class="action-item">
+                <a class="action-label icon new-file" role="button" tabindex="0" title="新建文件"></a>
+              </li>
+              <li class="action-item">
+                <a class="action-label icon new-folder" role="button" tabindex="0" title="新建文件夹"></a>
+              </li>
+              <li class="action-item">
+                <a class="action-label icon refresh-explorer" role="button" tabindex="0" title="刷新"></a>
+              </li>
+              <li class="action-item">
+                <a class="action-label icon collapse-explorer" role="button" tabindex="0" title="全部折叠"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div style="overflow:auto;padding-bottom: 10px;" autoHeight [position]="{ top: -90 }">
+      <perfect-scrollbar [config]="{suppressScrollX: true}">
+        <img src="../../../assets/imgs/file_explorer.png">
+      </perfect-scrollbar>
+    </div>
+  </div> -->
+
+  <!-- 工具箱 -->
+  <!-- <div *ngIf="currentTabIndex === 1" class="panel">
+    <div class="title">
+      <div class="title-label">
+        <span title="工具箱">工具箱</span>
+      </div>
+    </div>
+
+
+    <div style="overflow:auto; padding-bottom: 10px;" autoHeight [position]="{ top: -90 }">
+      <perfect-scrollbar [config]="{suppressScrollX: true}">
+        <ul class="toolbox">
+          <li *ngFor="let group of ctrls;let i=index;">
+            <a [class]="group.status === 'closed' ? 'icon group collapse': 'icon group expand' " (click)="changeStatus(group)">{{group.groupName}}</a>
+            <ul *ngIf="group.status === 'open'">
+              <li>
+                <a class="icon cursor">指针</a>
+              </li>
+              <li *ngFor="let ctrl of group.controls">
+                <a class="icon {{ctrl.code}}">{{ctrl.title}}</a>
+              </li>
+
+            </ul>
+          </li>
+        </ul>
+      </perfect-scrollbar>
+    </div>
+
+  </div> -->
+
+
+  <div *ngFor="let panel of panels let i=index" class="sidebar-content {{i === currentTabIndex ? 'active' : ''}}">
+    <div class="title">
+      <div class="title-label">
+        <span title="{{panel.title}}">{{panel.title}}</span>
+      </div>
+    </div>
+    <div style="overflow:hidden;position: relative" [style.height]="(height -35) + 'px'">
+      <!-- <perfect-scrollbar [config]="{suppressScrollX: true}"> -->
+        <!--<app-idecontentwrapper [content]="panel.content"></app-idecontentwrapper>-->
+        <ng-container #panelContainer></ng-container>
+        <farris-panelFrame
+            [ngClass]="i===currentTabIndex?'tab-content active':'tab-content'"
+            [src]="panel.elementUrl"
+        ></farris-panelFrame>
+      <!-- </perfect-scrollbar> -->
+    </div>
+  </div>
+</div>
+
+
+<div ngDraggable [bounds]="bounds" [region]="'west'" [inBounds]="true" (movingOffset)="onMoving($event)"
+     (endOffset)="onEndOffset($event)"
+     class="monaco-sash vertical" [style.height]="height + 'px'" style="width: 4px;"
+     [style.left]="originalWidth + 'px' "></div>

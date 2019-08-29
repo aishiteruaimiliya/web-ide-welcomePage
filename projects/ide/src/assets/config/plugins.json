@@ -1,0 +1,151 @@
+{
+  "openers": [
+    {
+      "name": "be",
+      "url": "bepackage.module#./src/packages/bedesigner-frame/bepackage.module.js#BeDesignerPackageModule"
+    },
+    {
+      "name": "vm",
+      "url": "vmpackage.module#./src/packages/vmdesigner-frame/vmpackage.module.js#VmDesignerPackageModule"
+    },
+    {
+      "name": "udt",
+      "url": "udtpackage.module#./src/packages/udtdesigner-frame/udtpackage.module.js#UdtDesignerPackageModule"
+    },
+    {
+      "name": "dbo",
+      "url": "tabledesignerpackage.module#./src/packages/tabledesigner-frame/tabledesignerpackage.module.js#TableDesignerPackageModule"
+    },
+    
+    {
+      "name": "aif-be-action",
+      "url": "aif-be-action-package.module#./src/packages/aif-be-action/aif-be-action-package.module.js#AifBeActionPackageModule"
+    },
+    {
+      "name": "aif-be-creation-process",
+      "url": "aif-be-creation-process-package.module#./src/packages/aif-be-creation-process/aif-be-creation-process-package.module.js#AifBeCreationProcessPackageModule"
+    },
+    {
+      "name": "aif-be-creation-rule",
+      "url": "aif-be-creation-rule-package.module#./src/packages/aif-be-creation-rule/aif-be-creation-rule-package.module.js#AifBeCreationRulePackageModule"
+    },
+    {
+      "name": "aif-be-event",
+      "url": "aif-be-event-package.module#./src/packages/aif-be-event/aif-be-event-package.module.js#AifBeEventPackageModule"
+    },
+    {
+      "name": "aif-be-flowchart",
+      "url": "aif-be-flowchart-package.module#./src/packages/aif-be-flowchart/aif-be-flowchart-package.module.js#AifBeFlowchartPackageModule"
+    },
+    {
+      "name": "aif-be-writeback-process",
+      "url": "aif-be-writeback-process-package.module#./src/packages/aif-be-writeback-process/aif-be-writeback-process-package.module.js#AifBeWritebackProcessPackageModule"
+    },
+    {
+      "name": "aif-be-writeback-rule",
+      "url": "aif-be-writeback-rule-package.module#./src/packages/aif-be-writeback-rule/aif-be-writeback-rule-package.module.js#AifBeWritebackRulePackageModule"
+    },
+    {
+      "name": "becmp",
+      "url": "cmppackage.module#./src/packages/cmpdesigner-frame/cmppackage.module.js#CmpDesignerPackageModule"
+    },
+    {
+      "name": "formEditor",
+      "url": "form-editor-package.module#./src/packages/form-editor-package/form-editor-package.module.js#FormEditorPackageModule"
+    },
+    {
+      "name": "rs",
+      "url": "rspackage.module#./src/packages/resource-metadata-designer/rspackage.module.js#ResourceMetadataPackageModule"
+    },
+    {
+      "name": "ccmpdesigner",
+      "url": "ccmppackage.module#./src/packages/ccmpdesigner/ccmppackage.module.js#CommonComponentPackageModule"
+    },
+    {
+      "name": "eapiDesigner",
+      "url": "sgpackage.module#./src/packages/sgdesigner-wizard/sgpackage.module.js#SgDesignerPackageModule"
+    },
+    {
+      "name": "iapidesigner",
+      "url": "iapipackage.module#./src/packages/iapidesigner/iapipackage.module.js#InternalServicePackageModule"
+    },
+    {
+      "name": "wfdesigner-frame",
+      "url": "wf-designer-package.module#./src/packages/wfdesigner-frame/wf-designer-package.module.js#WFDesignerPackageModule"
+    },
+    {
+      "name": "event",
+      "url": "event.package.module#./src/packages/event-designer/event.package.module.js#EventDesignerPackageModule"
+    },
+    {
+      "name": "action",
+      "url": "action.package.module#./src/packages/action-designer/action.package.module.js#ActionComponentPackageModule"
+    },
+    {
+      "name": "pubsub",
+      "url": "pubsub.package.module#./src/packages/pubsub-designer/pubsub.package.module.js#PubSubDesignerPackageModule"
+    },
+    {
+      "name": "help-metadata-designer",
+      "url": "help-metadata.module#./src/packages/help-metadata/help-metadata.module.js#HelpMetadataModule"
+    },
+    {
+      "name": "wcm",
+      "url": "control-metadata.module#./src/packages/control-metadata/control-metadata.module.js#ControlMetadataModule"
+    },
+    {
+      "name": "coderuledesigner",
+      "url": "coderulepackage.module#./src/packages/coderuledesigner/coderulepackage.module.js#CodeRulePackageModule"
+    },
+    {
+      "name": "webcmpdesigner",
+      "url": "webcmpentrypackage.module#./src/packages/webcmpdesigner/webcmpentrypackage.module.js#WebComponentPackageModule"
+    },
+    {
+      "name": "state-machine",
+      "url": "state-machine.module#./src/packages/state-machine/state-machine.module.js#StateMachinModule"
+    },
+    {
+      "name": "webcmddesigner",
+      "url": "webcmdpackage.module#./src/packages/webcmd/webcmdpackage.module.js#WebCommandPackageModule"
+    },
+    {
+      "name": "ts",
+      "url": "code-editor.module#./src/packages/code-editor/code-editor.module.js#CodeEditorPackageModule"
+    }
+  ],
+  "panels": [
+    {
+      "name": "file-tree-panel-package",
+      "url": "file-tree-panel-package.module#./src/packages/file-tree-panel-package/file-tree-panel-package.module.js#FileTreePanelPackageModule"
+    },
+    {
+      "name": "project-wizard",
+      "url": "project-package.module#./src/packages/project-wizard/project-package.module.js#ProjectWizardPackageModule"
+    },
+    {
+      "name": "projectdeploy-wizard",
+      "url": "projectdeploy-package.module#./src/packages/projectdeploy-wizard/projectdeploy-package.module.js#ProjectDeployWizardPackageModule"
+    },
+    {
+      "name": "nuget-wizard",
+      "url": "nuget-package.module#./src/packages/nuget-wizard/nuget-package.module.js#NugetWizardPackageModule"
+    },
+    {
+      "name": "folder-wizard",
+      "url": "folder-package.module#./src/packages/folder-wizard/folder-package.module.js#FolderWizardPackageModule"
+    },
+    {
+      "name": "metadata-wizard",
+      "url": "metadata-package.module#./src/packages/metadata-wizard/metadata-package.module.js#MetadataWizardPackageModule"
+    },
+    {
+      "name": "dbo-creator",
+      "url": "dbo-creator.module#./src/packages/dbo-creator/dbo-creator.module.js#DboCreatorModule"
+    },
+    {
+      "name": "form-create-wizard",
+      "url": "form-create-wizard-package.module#./src/packages/form-create-wizard-package/form-create-wizard-package.module.js#FormCreateWizardPackageModule"
+    }
+  ]
+}

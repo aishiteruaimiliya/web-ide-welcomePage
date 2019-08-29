@@ -1,0 +1,200 @@
+[
+    {
+        "type": "input",
+        "name": "输入类控件",
+        "items": [
+            {
+                "id": "TextBox",
+                "type": "TextBox",
+                "name": "文本",
+                "category": "input"
+            },
+            {
+                "id": "MultiTextBox",
+                "type": "MultiTextBox",
+                "name": "多行文本",
+                "category": "input"
+            },
+            {
+                "id": "TimeBox",
+                "type": "TimeBox",
+                "name": "时间",
+                "category": "input"
+            },
+            {
+                "id": "DateBox",
+                "type": "DateBox",
+                "name": "日期",
+                "category": "input"
+            },
+            {
+                "id": "EnumField",
+                "type": "EnumField",
+                "name": "下拉列表",
+                "category": "input"
+            },
+            {
+                "id": "NumericBox",
+                "type": "NumericBox",
+                "name": "数值",
+                "category": "input"
+            },
+            {
+                "id": "CheckBox",
+                "type": "CheckBox",
+                "name": "复选框",
+                "category": "input"
+            },
+            {
+                "id": "CheckBoxGroup",
+                "type": "CheckBoxGroup",
+                "name": "复选框组",
+                "category": "input"
+            },
+            {
+                "id": "RadioGroup",
+                "type": "RadioGroup",
+                "name": "单选框组",
+                "category": "input"
+            },
+            {
+                "id": "SwitchField",
+                "type": "SwitchField",
+                "name": "开关",
+                "category": "input"
+            },
+            {
+                "id": "LookupEdit",
+                "type": "LookupEdit",
+                "name": "帮助",
+                "category": "input"
+            }
+        ]
+    },
+    {
+        "type": "dataCollection",
+        "name": "数据集合类控件",
+        "items": [
+            {
+                "id": "TreeView",
+                "type": "TreeView",
+                "name": "树形控件",
+                "category": "dataCollection"
+            },
+            {
+                "id": "TreeGrid",
+                "type": "TreeGrid",
+                "name": "树表格",
+                "category": "dataCollection"
+            },
+            {
+                "id": "ListView",
+                "type": "ListView",
+                "name": "列表",
+                "category": "dataCollection"
+            },
+            {
+                "id": "DataGrid",
+                "type": "DataGrid",
+                "name": "表格",
+                "category": "dataCollection"
+            }
+        ]
+    },
+    {
+        "type": "command",
+        "name": "命令类控件",
+        "items": [
+            {
+                "id": "Button",
+                "type": "Button",
+                "name": "按钮",
+                "category": "command"
+            },
+            {
+                "id": "ButtonGroup",
+                "type": "ButtonGroup",
+                "name": "按钮组",
+                "category": "command"
+            },
+            {
+                "id": "Toobar",
+                "type": "Toobar",
+                "name": "工具栏",
+                "category": "command"
+            },
+            {
+                "id": "ContextMenu",
+                "type": "ContextMenu",
+                "name": "右键菜单",
+                "category": "command"
+            }
+        ]
+    },
+    {
+        "type": "container",
+        "name": "容器类控件",
+        "items": [
+            {
+                "id": "ContentContainer",
+                "type": "ContentContainer",
+                "name": "容器",
+                "category": "container"
+            },
+            {
+                "id": "Panel",
+                "type": "Panel",
+                "name": "Panel",
+                "category": "container"
+            },
+            {
+                "id": "Form",
+                "type": "Form",
+                "name": "表格",
+                "category": "container"
+            },
+            {
+                "id": "FieldSet",
+                "type": "FieldSet",
+                "name": "FieldSet",
+                "category": "container"
+            },
+            {
+                "id": "SlideView",
+                "type": "SlideView",
+                "name": "SlideView",
+                "category": "container"
+            }
+        ]
+    },
+    {
+        "type": "layout",
+        "name": "布局类控件",
+        "items": [
+            {
+                "id": "ResponseLayout",
+                "type": "ResponseLayout",
+                "name": "12列布局",
+                "category": "layout"
+            },
+            {
+                "id": "FlexLayout",
+                "type": "FlexLayout",
+                "name": "Flex布局",
+                "category": "layout"
+            },
+            {
+                "id": "TableLayout",
+                "type": "TableLayout",
+                "name": "表格布局",
+                "category": "layout"
+            },
+            {
+                "id": "GridLayout",
+                "type": "GridLayout",
+                "name": "Grid布局",
+                "category": "layout"
+            }
+        ]
+    }
+]

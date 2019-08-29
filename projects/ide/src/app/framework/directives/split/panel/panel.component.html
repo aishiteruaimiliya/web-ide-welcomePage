@@ -1,0 +1,13 @@
+<div >
+  <div class="title"></div>
+
+  <div class="content">
+    <ng-content></ng-content>
+  </div>
+
+</div>
+
+
+
+<div ngDraggable [region]="'west'" [inBounds]="true" (movingOffset)="onMoving($event)"
+    [ngClass]="direction" style="width: 4px;" ></div>

@@ -1,0 +1,29 @@
+<div class="stepWizard">
+  <div class="createNav d-flex flex-wrap" *ngIf="steps.length>1">
+    <div *ngFor="let step of steps" class="d-flex step" [class.active]="curStep.stepId===step.stepId">
+      <div class="d-flex" *ngIf="step.show" (click)="jumpStep(step)">
+        <div class="stepTitle">{{step.title}}</div>
+        <div class="triangle_border_right">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <perfect-scrollbar [config]="{suppressScrollX: true}">
+      <ng-container #stepContainer></ng-container>
+    </perfect-scrollbar>
+  </div>
+
+
+
+  <div class="footBtns">
+    <button type="button" class="btn btn-outline-secondary btn-sm px-3 mx-2" *ngIf="curStep.showCancelBtn" (click)="clickCancel()">取消</button>
+    <button type="button" class="btn btn-outline-primary btn-sm px-3 mx-2" *ngIf="curStep.showLastStepBtn" (click)="lastStep()"
+      type="submit">上一步</button>
+    <button type="button" class="btn btn-outline-primary btn-sm px-3 mx-2" *ngIf="curStep.showNextStepBtn" (click)="nextStep()"
+      type="submit">下一步</button>
+    <button type="button" class="btn btn-outline-primary btn-sm px-3 mx-2" *ngIf="curStep.showFinishBtn" (click)="finishWizard()">完成</button>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+{
+    "module": {
+        "id": "list-cmp",
+        "code": "list-cmp",
+        "name": "列表组件",
+        "caption": "列表组件",
+        "type": "Module",
+        "creator": "wang-xh",
+        "creationDate": "2018-08-30 10:56:00",
+        "updateVersion": "190123",
+        "showTitle": true,
+        "bootstrap": "list-cmp",
+        "schemas": [],
+        "states": [],
+        "contents": [],
+        "stateMachines": [],
+        "viewmodels": [
+            {
+                "id": "data-grid-component-viewmodel",
+                "code": "data-grid-component-viewmodel",
+                "name": "data-grid-component-viewmodel",
+                "fields": [],
+                "commands": [],
+                "serviceRefs": [],
+                "states": [],
+                "bindTo": "/",
+                "parent": null
+            }
+        ],
+        "components": [
+            {
+                "id": "data-grid-component",
+                "type": "Component",
+                "componentType": "dataGrid",
+                "viewModel": "data-grid-component-viewmodel",
+                "appearance": {
+                    "class": "flex-fill flex-column d-flex"
+                },
+                "onInit": "LoadNavList1",
+                "contents": [
+                    {
+                        "id": "data-grid-layout",
+                        "type": "ContentContainer",
+                        "appearance": {
+                            "class": "flex-fill flex-column d-flex"
+                        },
+                        "border": null,
+                        "font": null,
+                        "margin": null,
+                        "padding": null,
+                        "size": null,
+                        "contents": [
+                            {
+                                "id": "dataGrid",
+                                "type": "DataGrid",
+                                "appearance": {
+                                    "class": "flex-fill w-100"
+                                },
+                                "border": null,
+                                "font": null,
+                                "margin": null,
+                                "padding": null,
+                                "size": null,
+                                "dataSource": "",
+                                "fields": [],
+                                "focusedItem": null,
+                                "focusedIndex": null,
+                                "pagination": null,
+                                "identifyField": null,
+                                "multiSelect": null,
+                                "selectable": null,
+                                "itemTemplate": null,
+                                "toolBar": null,
+                                "sortable": false,
+                                "sort": null,
+                                "summary": null,
+                                "groupable": null,
+                                "group": null,
+                                "onSelectionChange": "LoadSubList1",
+                                "fieldEditable": false,
+                                "appendRow": null
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "webcmds": [],
+        "serviceRefs": []
+    }
+}

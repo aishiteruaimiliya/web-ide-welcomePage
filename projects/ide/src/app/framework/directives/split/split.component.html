@@ -1,0 +1,12 @@
+<div >
+
+    <app-panel *ngFor="let n of amount | Number2Array">
+        <ng-template [ngTemplateOutlet]="panel{{n}}"></ng-template>
+    </app-panel>
+
+    <div class=" panel center">
+
+    </div>
+
+</div>
+<ng-content></ng-content>

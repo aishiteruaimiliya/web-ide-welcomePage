@@ -1,0 +1,113 @@
+:host {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.stepWizard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.stepWizard .createNav {
+    background: #e8edf2;
+    height: 40px;
+    overflow: hidden;
+}
+
+.stepWizard .createNav .stepTitle {
+    padding: 0px 10px;
+    color: #666666;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.stepWizard .createNav .step.active .stepTitle {
+    color: #FFFFFF;
+    background-color: #346180 !important;
+}
+
+.stepWizard .createNav .step:not(:first-child).active .stepTitle {
+    margin-left: -17px;
+    padding-left: 25px;
+}
+
+.stepWizard .createNav .stepTitle.disable {
+    color: #cdcdcf;
+}
+
+.stepWizard .createNav .step .triangle_border_right {
+    width: 0;
+    height: 0;
+    border-width: 20px 0 20px 18px;
+    border-style: solid;
+    border-color: transparent transparent transparent #cccccc;
+    position: relative;
+}
+
+.stepWizard .createNav .step .triangle_border_right span {
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 20px 0px 20px 18px;
+    border-style: solid;
+    border-color: transparent transparent transparent #e8edf2;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+.stepWizard .createNav .step.active .triangle_border_right {
+    width: 0;
+    height: 0;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #e8edf2;
+}
+
+.stepWizard .createNav .step.active .triangle_border_right span {
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #346180 !important;
+}
+
+.stepWizard .content {
+    flex: 1;
+    overflow: auto;
+    font-size: 0.875rem;
+}
+
+.stepWizard .content .ps-content {
+    width: inherit;
+    height: inherit;
+}
+
+.stepWizard .footBtns {
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 10px 1rem;
+    background: #F4F4F4;
+    border-top: 1px solid #dddddd;
+}
+
+/* .stepWizard .createNav .step.finished .stepTitle {
+    color: #FFFFFF;
+    background-color: #397439;
+}
+
+.stepWizard .createNav .step.finished .triangle_border_right span {
+    border-color: transparent transparent transparent #397439;
+}
+
+.stepWizard .createNav .step:not(:first-child).finished .stepTitle {
+    margin-left: -17px;
+    padding-left: 25px;
+} */

@@ -1,0 +1,55 @@
+<div #east class="property panel" [style.height]="height + 'px'">
+
+    <div class="title">
+        <div class="title-label">
+            <span title="属性">属性面板</span>
+        </div>
+        <div class="title-actions">
+            <div class="monaco-toolbar">
+                <div class="monaco-action-bar animated">
+                    <ul class="actions-container" role="toolbar" aria-label="属性面板">
+                        <li class="action-item">
+                            <a class="action-label icon collapse-property" title="全部折叠"></a>
+                        </li>
+                        <li class="action-item" (click)="collapse()">
+                            <a class="action-label icon hide-panel" title="关闭"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div #propertyPanel class="panel-body" style="overflow:auto;" [style.height]="(height - 35) + 'px'">
+            <perfect-scrollbar [config]="{suppressScrollX: true}">
+                <!-- <ul class="property-grid">
+                    <li *ngFor="let group of properties">
+                        <span  [class]="group.status === 'closed' ? 'group-label collapse': 'group-label expand' " (click)="changeStatus(group)">{{ group.groupName }}</span>
+
+                        <table [style.width]="width - 30 + 'px'" class="table" [style.display]="group.status === 'open'?'table':'none'">
+                            <tbody>
+                                <tr *ngFor="let pro of group.propertyList">
+                                    <td [style.width]="propertyTitleWidth + 'px'">{{pro.title}}</td>
+                                    <td>
+                                        <input type="text" style="width: 100%">
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </li>
+                </ul> -->
+                <ng-container #content></ng-container>
+            </perfect-scrollbar>
+        
+
+        <div id="property-grid-bar" ngDraggable [bounds]="propertyPanel" [inBounds]="true"  (movingOffset)="resizePropertyWidth($event)"
+            class="monaco-sash vertical" [style.height]="(height - 35) + 'px'" style="width: 4px;" [style.left]="initDragbarLeft + 'px' "></div>
+
+    </div>
+</div>
+
+
+
+<div #panelDrag = "ngDraggable" ngDraggable [region]="'east'" [bounds]="bounds" [inBounds]="true" (movingOffset)="onMoving($event)" 
+    class="monaco-sash vertical" [style.height]="height + 'px'" style="width: 4px;" [style.left]="initBarPosition + 'px' "></div>
