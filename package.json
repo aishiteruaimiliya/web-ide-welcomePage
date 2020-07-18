@@ -56,7 +56,7 @@
     "@progress/kendo-theme-default": "3.6.0",
     "core-js": "^2.5.4",
     "date-fns": "^1.29.0",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.19",
     "lodash-es": "^4.17.11",
     "monaco-editor": "^0.10.1",
     "ng-packagr": "^4.7.0",
